@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <link href="css/materialize.min.css" rel="stylesheet" type="text/css"/>
+        <link rel = "stylesheet" href = "css/material.css">
+        <script src="js/materialize.min.js" type="text/javascript"></script>
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="js/index.js" type="text/javascript"></script>
+        <title>Manual HTML5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" data-activates="menu-lateral" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+                <a href="#!" class="brand-logo">HTML5</a>
+                <ul id="menu-lateral" class="side-nav collapsible">
+                    <li class="white"><a href="#!" id="menu_main">Inicio</a></li>
+                    <li class="white">
+                        <a class="collapsible-header">HTML5<i class="material-icons"></i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#!" id="menu_estructura">Estructura básica</a></li>
+                                <li><a href="#!" id="menu_formato">Etiquetas de formato</a></li>
+                                <li><a href="#!" id="menu_semantica">Etiquetas semánticas</a></li>
+                                <li><a href="#!" id="menu_listas">Listas</a></li>
+                                <li><a href="#!" id="menu_tablas">Tablas</a></li>
+                                <li><a href="#!" id="menu_cajas">Modelo de cajas</a></li>
+                                <li><a href="#!" id="menu_formularios">Formularios</a></li>
+                                <li><a href="#!" id="menu_enlaces">Enlaces</a></li>
+                                <li><a href="#!" id="menu_multimedia">Multimedia</a></li>
+                                <li><a href="#!" id="menu_canvas">Canvas</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="white">
+                        <a class="collapsible-header">Accesibilidad<i class="material-icons"></i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#!" id="menu_wcag">WCAG</a></li>
+                                <li><a href="#!" id="menu_niveles">Niveles de accesbilidad</a></li>
+                                <li><a href="#!" id="menu_requisitos">Requisitos legales y sanciones</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="white">
+                        <a class="collapsible-header">CSS<i class="material-icons"></i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#!" id="menu_enlazar">Cómo enlazar CSS</a></li>
+                                <li><a href="#!" id="menu_color">Colores y fondos</a></li>
+                                <li><a href="#!" id="menu_fuente">Fuentes</a></li>
+                                <li><a href="#!" id="menu_texto">Textos</a></li>
+                                <li><a href="#!" id="menu_clase">Clases e IDs</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#!" id="menu_creditos">Sobre esta aplicación</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- Página principal -->
+            <div id="panel_main" class="panel" hidden>
+                <p><strong>Manual básico sobre HTML5 y CSS e información acerca de la accesibilidad web.</strong></p>
+                <p><strong>Se recoge en él estructura de HTML y etiquetas básicas y más usadas, contando con diversos ejemplos y muestras del código.</strong></p>
+                <p><strong>Se habla sobre la accesibilidad web, qué es, como aplicarla y las diferentes sanciones que se imponen a las empresas que no cumplen sus estándares.</strong></p>
+                <p><strong>Se recoge el funcionamiento de CSS, como añadirlo a nuestro archivo .html y lo que podemos hacer con él (disponible en próximas versiones).</strong></p>
+            </div>
+            <!-- HTML5 -->
+            <div id="panel_estructura" class="panel" hidden>
+                <h1>Estructura básica de HTML5</h1>
+                <div id="Estructura Básica">
+                    <p>La estructura de HTML5, está formada por la etiqueta &lt;html&gt;&lt;/html&gt;, que contiene todo el código de la página.</p>
+                    <p>A la etiqueta &lt;html&gt; se le puede añadir el atributo lang que indica el lenguaje en el que está escrito el contenido de la página. </p>
+                    <p>A continuación viene la cabecera del documento, delimitada por&lt;head&gt;&lt;/head&gt;.</p>
+                    <p>Después viene la etiqueta &lt;body&gt;&lt;/body&gt;, que indica el cuerpo de la página.</p>
+                    <p>Es decir, la estructura sería:</p>
+                    <pre>
+                    &lt;html&gt;
+                        &lt;head&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;</b> 
+                    </pre>
+                    <p>A continuación vamos a definir la cabecera y el cuerpo del documento.</p>
+                    <h2>Cabecera</h2>
+                    <p>La cabecera de un documento cuenta con una serie de atributos opcionales, que nos ayudarán a definir la página y como va a actuar. El más importante es &lt;title&gt;, que permite escribir el título del documento. El título no se muestra en la página, sino en la parte superior de la ventana del visualizador, como identificador en los <I>bookmarks</I> y en la <I>history list</I>. Se utiliza de la siguiente forma:</p>
+                    <pre>
+                    &lt;head&gt; 
+                        &lt;title&gt;Título del documento HTML&lt;/title&gt; 
+                    &lt;/head&gt;
+                    </pre> 
+                    <p>También es importante la etiqueta &lt;meta&gt;, que se utiliza, entre otras cosas, con el atributo <i>charset</i> para indicar la codificación de caracteres en la que esta escrito el código, como por ejemplo en este caso que esta escrito en "UTF-8".</p>
+                    <p>Dentro de la cabecera se encuentra también la etiqueta &lt;link&gt;, el cual permite  invocar  a  un  recurso  externo  a  la  página  a  fin  de  incorporar  a  la  misma  el contenido del recurso. </p>
+                    <p>Los atributos más importantes de link son:</p>
+                    <ul>
+                        <li><b>rel:</b> que indica la relación del recurso con la página. Las posibilidades que encuentra son:</li>
+                            <ul>
+                                <li><b>stylesheet:</b> que indica que el recurso que estamos usando es una hoja de estilos. </li>
+                                <li><b>alternate:</b> que indica que el recurso es una versión alternativa del documento actual.</li>
+                                <li><b>icon:</b> que indica que el recurso es el icono de la página Web.</li>
+                            </ul>
+                        <li><b>href:</b> que indica la dirección URL al recurso que hemos solicitado. Puede ser relativa o absoluta.</li>
+                    </ul>
+                    <p> También encontramos la etiqueta <b>script</b> que nos permite colocar los scripts que queramos usar en la página web. Sus atributos son:</p>
+                    <ul>
+                        <li><b>charset:</b> Codificación usada para el texto script y usa por defecto el que tiene la propia página.</li>
+                        <li><b>src:</b> Nos permite indicar la URL a un archivo externo que contiene código que se colocará en la página.</li>
+                    </ul>
+                    <p> Por último nos encontramos con los comentarios que se puede utilizar en todo el documento y sirven para leer o entender el código más fácil ya que damos breves explicaciones de lo que hemos hecho en esa línea.</p>
+                    <p> Para poner los comentarios lo haríamos de esta forma: &lt;!-- Escribe aqui tu comentario --&gt;</p>
+                
+                
+                    <h2> Cuerpo </h2>
+                    <p>Es la parte delimitada por <b>&lt;body&gt;</b> y  <b>&lt; /body &gt; </b>. Puede llevar los siguientes atributos:</p> 
+                    <ul>
+                      <li> <font color=red><STRONG>background="imagen"</STRONG></FONT>: define el fondo. 
+                    </ul>
+                    <ul>
+                      <li> <font color=red><STRONG>bgcolor="######"</STRONG></FONT>: color del fondo.
+                    </ul>
+                    <ul>
+                      <li> <font color=red><STRONG>text="######"</STRONG></FONT>: color del texto. Por defecto será negro.
+                    </ul>
+                    <ul>
+                      <li> <font color=red><STRONG>link="######"</STRONG></FONT>: color de los links. Por defecto será azul.
+                    </ul>
+                    <ul>
+                      <li> <font color=red><STRONG>vlink="######"</STRONG></FONT>: color de los links visitados.  Por defecto será violeta.
+                    </ul>
+                    <p>En este apartado es donde se escribe el código que hace funcionar a toda la página.</p>
+                </div>
+            </div>
+            <div id="panel_formato" class="panel" hidden>
+				<h1>Formato básico de texto</h1>
+                <div id="etiquetas_formato">
+                    <h2>Etiquetas de formato</h2>
+                    <h3><em>Títulos y párrafos</em></h3>
+                    <p>Cualquier texto que introduzcamos en un archivo HTML tiene que estar contenido en una etiqueta que le de un contexto. Este contexto se da con una serie de etiquetas (que siempre se escribirán en minúsculas) que definen las propiedades de lo que hay contenido entre ellas.</p>
+                    <p>La etiqueta básica y que nunca debe faltar en un párrafo es la etiqueta <strong>&lt;p&gt; &lt;/p&gt;</strong> que debe ir precedida del elemento menor que <strong>&lt</strong> y terminada por el elemento mayor que <strong>&gt</strong>. Esta sirve para definir <i>párrafos</i>, es decir delimita al parrafo en su inicio y final.  Veamos como ejemplo el siguiente:</p>
+                    <p> <strong>&lt;p&gt; &lt; Entiéndase esta línea como un parrafo contenido entre la etiqueta anteriormente descrita &gt; &lt;/p&gt;</strong></p>
+                    <p>En cada párrafo podemos insertar varios tipos de etiquetas. Esta etiquetas se usan en función del formato que queramos darle al párrafo (tambien se pueden utilizar para unidades menores que el párrafo, como puede ser una palabra). Algunas de estas etiquetas son las siguientes: </p>
+                    <p>La etiqueta <strong>&lt;br&gt;</strong>, sirve para sirve para insertar un <i>salto de línea</i> cuando nos interese.</p>
+                    <br/>
+                    <p>La etiqueta <strong>&lt;hr&gt;</strong>, sirve para sirve para insertar una <i>línea horizontal</i> en el texto.</p>
+                    <hr/>
+                    <p>Los <i>títulos</i> se pueden destacar haciendo uso de las etiquetas <strong>&lt;h1&gt; &lt;/h1&gt; &lt;h2&gt; &lt;/h2&gt;</strong>, etc; hasta el h6. A continuación vemos los distintos tipos que existen dependiendo de la importancia del título.</p>
+                    <h1>Título con etiqueta h1</h1>
+                    <h2>Título con etiqueta h2</h2>
+                    <h3>Título con etiqueta h3</h3>
+                    <h4>Título con etiqueta h4</h4>
+                    <h5>Título con etiqueta h5</h5>
+                    <h6>Título con etiqueta h6</h6>
+                    <hr/>      
+                    <h3><em>Etiquetas para darle formato al texto</em></h3>
+                    <p>Para darle formato al texto, es decir para que las partes contenidas en un párrafo, tengan propiedades específicas en función de lo que queramos indicar, se utilizan etiquetas que le dan esos valores. Por ejemplo, si queremos resaltar algo en negrita o ponerlo en cursiva.Veamos algunas de las etiquetas mas utilizadas para esto:</p>
+                    <ol type="I">
+                        <li>
+                            <p>Las etiquetas <strong>&lt;strong&gt;</strong> y <strong>&lt;/strong&gt;</strong>, sirven para destacar una parte del texto. <i>Normalmente el texto incluido entre esas etiquetas se representa en negrita.</i></p>
+                        </li>
+                        <li>
+                            <p>Las etiquetas <strong>&lt;em&gt;</strong> y <strong>&lt;/em&gt;</strong>, se emplean para enfatizar un texto; <i>habitualmente se representa en cursiva.</i></p>
+                        </li>
+                        <li>
+                            <p>Las etiquetas <strong>&lt;i&gt;</strong> y <strong>&lt;/i&gt;</strong>, se emplean para poner en cursiva un texto, <i>pero no se enfatiza el texto como con las etiquetas <strong>&lt;em&gt;</strong> <strong>&lt;/em&gt;</strong>.</i></p>
+                        </li>
+                        <li>
+                            <p>Las etiquetas <strong>&lt;sub&gt;</strong> y <strong>&lt;/sub&gt;</strong>, permite incluir una letra o número de tamaño pequeño que se coloca en el lado derecho y en la parte de abajo de un signo gráfico para indicar algo. </p>
+                            <p>Si quisieramos escribir una formula como por ejemplo H<sub>2</sub>O se veria de la siguiente manera:  <strong>&lt;p&gt; H&lt;sub&gt;2&lt;/sub&gt;O &lt;/p&gt;</strong> </p>
+                        </li>
+                        <li>
+                            <p>Similar a la anterior tenemos las etiquetas <strong>&lt;sup&gt;</strong> y <strong>&lt;/sub&gt;</strong>. Esta nos permite poner superíndices, es decir, permite incluir una letra o número de tamaño pequeño que se coloca en el lado derecho y en la parte de arriba de un signo gráfico para indicar algo. </p>
+                            <p>Para incluir un superíndice en una expresión como por ejemplo H<sup>2</sup>O se veria de la siguiente manera:  <strong>&lt;p&gt; H&lt;sup&gt;2&lt;/sup&gt;O &lt;/p&gt;</strong></p>
+                        </li>
+                        <li>
+                            <p>Las etiquetas <strong>&lt;abbr&gt;</strong> y <strong>&lt;/abbr&gt;</strong>, se emplean para utlizar abreviaturas de tipo <strong>O.N.U</strong>. Al utilizar estas etiquetas, aparacerá un pequeño cuadro de texto junto a la abreviatura, indicando el significado de la misma. Por ejemplo la siguiente abreviatura: <strong><abbr title="Su Alteza Real">SAR</abbr></strong></p>
+                        </li>
+                        <li>
+                            <p><strong>&lt;acronym&gt;</strong> y <strong>&lt;/acronym&gt;</strong>. Estas etiquetas sirven para utilizar acronimos. Por ejemplo <strong>ADN</strong> o <strong>CD</strong>. A continuacion vemos los siguientes ejemplos:  <strong><acronym title="Acido Desoxirribonucleico">ADN</abbr> o <acronym title="Disco compacto">CD</abbr></strong></p>
+                        </li>
+                        <li>
+                            <p>Las etiquetas <strong>&lt;dfn&gt;</strong> y <strong>&lt;/dfn&gt;</strong>, permiten indicar la definicion de un termino. Por ejemplo <dfn title="Que durará siempre; que, habiendo tenido principio, no tendrá fin">Sempiterno</dfn>    
+                        </li>
+                    </ol>
+                    <p>Existen más tipos de etiquetas para dar formato a texto, pero las ya vistas son las más utlizadas.</p>    
+                </div>
+            </div>
+            <div id="panel_semantica" class="panel" hidden>
+				<h1>Etiquetas semánticas de HTML5</h1>
+                <div id="etiquetas_semanticas">
+                        <p>Las etiquetas semánticas son aquellas que dan un significado a las partes del documento.
+                            Por decirlo de otra forma, son etiquetas que indican qué es el contenido que contienen, en lugar de cómo se debe formatear al mostrar el documento <strong><acronym title="HiperText Markup Languaje">HTML</abbr></strong> en un cliente web. Estas nos sirven para que los motores de búsqueda, o cualquier otro mecanismo automático que lea un sitio web, sepa con exactitud qué partes de su contenido corresponden a cada una de las partes típicas de un sitio. Generalmente, en cualquier documento tenemos una cabecera, un cuerpo y un pie de página, elementos que definen la estructura representados por diversas etiquetas.
+                        </p>
+                        <p>De este modo, HTML5 tiene una etiqueta HEADER, que debe englobar aquellos elementos          correspondientes a la cabecera de la página. Tiene un FOOTER, que debe englobar todas las    etiquetas que componen el pie. Para el cuerpo realmente no existe una etiqueta en     concreto, sino que se representará por diversas otras como SECTION o ASIDE. Existirán        además otras etiquetas que representan elementos típicos como la barra de                    navegación, etiqueta NAV. Cabe destacar que aunque HEADER quiera decir que esa sección es una cabecera,    el navegador no va en ningún caso a posicionar el elemento en la parte superior del         documento. Lo mismo con FOOTER, que no lo colocará en la parte inferior, o ASIDE al          lateral. Por ello, todos los estilos y posicionamiento deben quedar a cargo de otras         herramientas  como CSS.
+                        </p>
+                    <ol>
+                         <li>
+                            <h5><strong>Etiqueta &lt;header&gt;&lt;/header&gt;</strong></h5>
+                            <p>La etiqueta header permite identificar la cabecera de cualquier parte de un
+                            documento. Esta no debe confundirse con la etiqueta head, ni debe incluirse dentro de etiquetas como foot o address.
+                            </p>  
+                        </li>
+                        <li>
+                            <h5><strong>Etiqueta &lt;footer&gt;&lt;/footer&gt;</strong></h5>
+                            <p>Esta etiqueta sirve para marcar el pie de una página, sección o artículo. Para dar por concluida nuestra plantilla o estructura básica de nuestro documento HTML5, sólo necesitamos un elemento más. Lo único que necesitamos para cerrar el diseño es darle una terminación al cuerpo del documento. HTML5 tiene un elemento específico para este fin llamado &lt;footer&gt;.
+                            </p>  
+                        </li>
+                        <li>
+                            <h5><strong>Etiqueta &lt;aside&gt;&lt;/aside&gt;</strong></h5>
+                            <p>Con las etiquetas &lt;aside&gt; y &lt;/aside&gt;, se nos invita a rodear todo aquel contenido que no es directamente contenido principal del que estamos hablando o del que estamos tratando en esa página en concreto. La norma dice que se use para todo aquel contenido tangencial al contenido principal de la página. Lo usaremos por tanto para todos aquellos elementos secundarios, como podrían ser los bloques publicitarios, enlaces externos, citas, un calendario de eventos, etc, siempre claro que no encontremos otra etiqueta más acorde de entre las ya comentadas.
+                            </p> 
+                        </li>
+                        <li>
+                            <h5><strong>Etiqueta &lt;section&gt;&lt;/section&gt;</strong> </h5>
+                            <p>Es un elemento que permite dividir en diferentes partes o secciones un documento. Normalmente, un bloque de texto al que perfectamente le podríamos colocar un título o encabezado. Además, todo el contenido que engloba ha de guardar cierta relación entre sí. Una regla que podemos usar para saber si un bloque de código o un elemento de una página web debe encerrarse entre esta etiqueta es el preguntarse.... si la web fuera un libro.... ¿estaría ese elemento en el índice inicial del mismo? Si la respuesta es SÍ, es buen candidato para section.
+                            </p>  
+                        </li>
+                        <li>
+                            <h5><strong>Etiqueta &lt;nav&gt;&lt;/nav&gt;</strong> </h5>
+                            <p>Es una etiqueta que define los enlaces de navegacion del documento o un menu desplegable dentro del mismo. Cada vez es más habitual que nuestras páginas aparezcan no solo en los navegadores que usamos en el ordenador, sino también en dispositivos móviles, teléfonos, iPads, etc. Al usar esta etiqueta, el navegador  podría dar la opción al usuario de esconder el menú de navegación para no molestar, para tener más espacio disponible para ver el contenido importante. También podría dar la opción de hacerlo aparecer cuando el usuario quiera cambiar de sección. Esto solo sería posible si se sabe dónde empieza y dónde termina ese menú de navegación y eso es precisamente lo que conseguimos con la etiqueta nav. 
+                            </p>  
+                        </li>
+                    </ol> 
+                    <p>Además de las etiquetas vistas, existen otras etiquetas de tipo semantico para HTML, como pueden ser <strong>&lt;article&gt;&lt;/article&gt;</strong> , <strong>&lt;hgroup&gt;&lt;/hgroup&gt;</strong>, etc.</p>
+                    <p>Así quedaría el codigo fuente de una web con las etiquetas semánticas en uso:</p>             
+                    <pre>
+                        &lt;!DOCTYPE &lt;html&gt;
+                        &lt;html lang="es"&gt;   
+                                            
+                            &lt;head&gt;
+                                &lt;meta charset="UTF-8"/&gt;
+                                &lt;title&gt;TITULO&lt;/title&gt;
+                            &lt;/head&gt;
+        
+                            <strong>&lt;nav&gt;</strong>
+                                &lt;ul&gt;
+                                  &lt;li&gt;&l;ta href="cursohtml.html"&gt;Curso de Html5&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="cursocss.html"&gt;Curso de CSS&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="cursojavascript.html"&gt;Curso de Javascript&lt;/a&gt;&lt;/li&gt;
+                                &lt;/ul&gt;
+                            <strong>&lt;/nav&gt;</strong>
+                                            
+                            &lt;body&gt;
+                            <strong>&lt;header&gt;</strong>
+                                &lt;h1&gt;TITULO DE LA WEB&lt;/h1&gt;
+                                &lt;h2&gt;Breve descripción de la página web.&lt;/h2&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;&lt;primer elemento lista&lt;/li&gt;
+                                        &lt;li&gt;&lt;segundo elemento lista&lt;/li&gt;
+                                        &lt;li&gt;&lt;tercer elemento lista&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                            <strong>&lt;/header&gt;</strong>
+                            
+                            <strong>&lt;section&gt;</strong>
+                                &lt;h2&gt;Inicios en HTML. Tim Bernes Lee&lt;/h2&gt;
+                                &lt;p&gt;.....&lt;/p&gt;
+                            <strong>&lt;/section&gt;</strong>
+                            <strong>&lt;section></strong>
+                                &lt;h2&gt;Creación de la web. Primeros navegadores&lt;/h2&gt;
+                                &lt;p&gt;.....&lt;/p&gt;
+                            <strong>&lt;/section&gt;</strong>
+                            <strong>&lt;section&gt;</strong>
+                                &lt;h2&gt;La guerra de los navegadores&lt;/h2&gt;
+                                &lt;p&gt;.....&lt;/p&gt;
+                            <strong>&lt;/section></strong>
+                            
+                            <strong>&lt;aside&gt;</strong>
+                                &lt;h1&gt;Publicidad&lt;h1&gt;
+                                (( código de la publicidad ))
+                            <strong>&lt;/aside&gt;</strong>
+                            
+                            <strong>&lt;footer&gt;</strong>
+                                &lt;p&gt;Realizado por Jorge Sánchez&lt;/p&gt;
+                            <strong>&lt;/footer&gt;</strong>    
+                            &lt;/body&gt;
+                        &lt;/html&gt;  
+                    </pre>     
+                </div>
+            </div>
+            <div id="panel_listas" class="panel" hidden>
+                <h1>Listas en HTML5</h1>
+                <div id="listas">
+                    <p>Hay dos tipos de listas en HTML5: <em>ordenadas y desordenadas</em>. Para ambas, los elementos que contienen deben ir entre las etiquetas &lt;li&gt;&lt;/li&gt;.</p>
+                        <h3>Listas ordenadas</h3>
+                            <p>Para las listas ordenadas usamos la etiqueta <strong>&lt;ol&gt;</strong>.</p>
+                            <p>Los elementos deben ir entre las etiquetas <strong>&lt;li&gt; &lt;/li&gt;</strong>.</p>
+                            <p>Ejemplo de lista ordenada numérica:</p>
+                            <ol>
+                                <li>Primer elemento.</li>
+                                <li>Segundo.</li>
+                                <li>Tercer elemento de la lista.</li>
+                            </ol>
+                            <p>Código fuente de la lista ordenada anterior:</p>
+                                <pre>
+                                    &lt;ol&gt;
+                                        &lt;li&gt;Primer elemento.&lt;/li&gt;
+                                        &lt;li&gt;Segundo.&lt;/li&gt;
+                                        &lt;li&gt;Tercer elemento de la lista.&lt;/li&gt;
+                                    &lt;/ol&gt;
+                                </pre>
+                            <p>Podemos usar diferentes numeraciones, como números romanos, letras, 
+                            números romanos en minúscula, letras mayúsculas, etc. Ejemplo: 
+                            <strong>&lt;ol type="a|A|i|I|1"&gt; &lt;/ol&gt;</strong>."</p>
+                            <p>Ejemplo de lista ordenada con números romanos, usando <strong>&lt;ol type="I"&gt; &lt;/ol&gt;</strong>:</p>
+                            <ol type="I">
+                                <li>Primer elemento.</li>
+                                <li>Segundo.</li>
+                                <li>Tercer elemento de la lista.</li>
+                            </ol>
+                            <p>Ejemplo de lista ordenada con letras, usando <strong>&lt;ol type="a"&gt; &lt;/ol&gt;</strong>:</p>
+                            <ol type="a">
+                                <li>Primer elemento.</li>
+                                <li>Segundo.</li>
+                                <li>Tercer elemento de la lista.</li>
+                            </ol>
+                            <p>Ejemplo de lista en orden inverso usando <strong>&lt;ol reversed&gt; &lt;/ol&gt;</strong>:</p>
+                            <ol reversed>
+                                <li>Primer elemento.</li>
+                                <li>Segundo.</li>
+                                <li>Tercer elemento de la lista.</li>
+                            </ol>
+                        <h3>Listas desordenadas</h3>
+                            <p>En las listas desordenadas usamos la etiqueta <strong>&lt;ul&gt;</strong>.</p>
+                            <p>Cada elemento debe ir entre las etiquetas <strong>&lt;li&gt; &lt;/li&gt;</strong>.</p>
+                            <p>Ejemplo de lista desordenada:</p>
+                                <ul>
+                                    <li>Primer elemento.</li>
+                                    <li>Segundo.</li>
+                                    <li>Tercer elemento de la lista.</li>
+                                </ul>
+                            <p>Lista desordenada con <strong>&lt;ul type="square"&gt; &lt;/ul&gt;</strong>:</p>
+                                <ul type="square">
+                                    <li>Primer elemento.</li>
+                                    <li>Segundo.</li>
+                                    <li>Tercer elemento de la lista.</li>
+                                </ul>
+                            <p>Lista desordenada con<strong> type="disc" </strong>(recuerda que no hace falta cambiar nada en los &lt;li&gt;:</p>
+                                <ul type="disc">
+                                    <li>Primer elemento.</li>
+                                    <li>Segundo.</li>
+                                    <li>Tercer elemento de la lista.</li>
+                                </ul>
+                            <p>Lista desordenada con <strong>type="circle"</strong>:</p>
+                                <ul type="circle">
+                                    <li>Primer elemento.</li>
+                                    <li>Segundo.</li>
+                                    <li>Tercer elemento de la lista.</li>
+                                </ul>
+                                <hr/>
+                                <p>Además también pueden ser listas <em>anidadas</em>, es decir, listas dentro de una lista, y listas de <em>términos</em>.</p>
+                        <h3>Listas anidadas</h3>
+                            <p>Ejemplo de lista anidada:</p>
+                                <ul>
+                                    <li>Café</li>
+                                    <li>Té
+                                        <ul>
+                                            <li>Té negro</li>
+                                            <li>Té verde</li>
+                                        </ul>
+                                    </li>
+                                    <li>Leche</li>
+                                </ul> 
+                            <p>Código fuente de la lista anidada anterior:</p>
+                            <pre>
+                                &lt;ul&gt;
+                                    &lt;li&gt;Café&lt;/li&gt;
+                                    &lt;li&gt;Té
+                                        &lt;ul&gt;
+                                            &lt;li&gt;Té negro&lt;/li&gt;
+                                            &lt;li&gt;Té verde&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;Leche&lt;/li&gt;
+                                &lt;/ul&gt;
+                            </pre>
+                        <h3>Listas de términos</h3>
+                            <p>Este tipo de listas suelen servir para dar una definición o diferenciación a los elementos de una lista desordenada.</p>
+                            <p>Para listas de términos usamos la etiqueta <strong>&lt;dl&gt;</strong></p>
+                            <p>Los elementos deben de ir entre las etiquetas<strong>&lt;dt&gt;</strong></p>
+                            <p>La descripcion de los elementos deben de ir entre las etiquetas<strong>&lt;dd&gt;</strong></p>
+                            <p>Ejemplo de lista de términos:</p>
+                                <dl>
+                                    <dt>Tenis</dt>
+                                        <dd>Se juega con <strong>raqueta</strong></dd>
+                                    <dt>Fútbol</dt>
+                                        <dd>Se juega con <strong>balón de fútbol</strong></dd>
+                                    <dt>Baloncesto</dt>
+                                        <dd>Se juega con <strong>balón de baloncesto</strong></dd>
+                                </dl>
+                            <p>Código fuente de la lista de términos anterior:</p>
+                                <pre>
+                                    &lt;dl&gt;
+                                        &lt;dt&gt;Tenis&lt;/dt&gt;
+                                            &lt;dd&gt;Se juega con &lt;strong&gt;raqueta&lt;/strong&gt;&lt;/dd&gt;
+                                        &lt;dt&gt;Fútbol&lt;/dt&gt;
+                                            &lt;dd&gt;Se juega con &lt;strong&gt;balón de fútbol&lt;/strong&gt;&lt;/dd&gt;
+                                        &lt;dt>Baloncesto</dt>
+                                            &lt;dd&gt;Se juega con &lt;strong&gt;balón de baloncesto&lt;/strong&gt;&lt;/dd&gt;
+                                    &lt;/dl&gt;
+                                </pre>
+                    </div>
+            </div>
+            <div id="panel_tablas" class="panel" hidden>
+                <h1>Tablas en HTML5</h1>
+                <div id="tablas">
+                    <p>Son  uno  de  los  elementos  fundamentales  de  HTML5  para  mejorar  la  puesta 
+                            visual  de  las  páginas  web.</p>
+                    <p>La defición de una tabla siempre empieza con la etiqueta <strong>&lt;table&gt;</strong>, por cada fila se utiliza
+                            la etiqueta <strong>&lt;tr&gt;</strong> y por cada columna se utiliza la etiqueta <strong>&lt;td&gt;</strong>. A la etiqueta table 
+                            solo se le debe añadir el atributo <strong>border</strong> para indicar la anchura del borde de
+                            la tabla, además de los atributos comunes.</p>
+                    <p>Ejemplo de tabla sencilla:</p> 
+                        <table border="1kk">
+                            <tr>
+                                <td></td>
+                                <td>Lunes</td>
+                                <td>Martes</td>
+                                <td>Miércoles</td>
+                                <td>Jueves</td>
+                                <td>Viernes</td>
+                            </tr>
+                            <tr>
+                                <td>10:30</td>
+                                <td>Matemáticas</td>
+                                <td>Geografía</td>
+                                <td>Física</td>
+                                <td>Dibujo</td>
+                                <td>Matemáticas</td>
+                            </tr>
+                            <tr>
+                                <td>11:30</td>
+                                <td>Inglés</td>
+                                <td>Lengua</td>
+                                <td>Geografía</td>
+                                <td>Química</td>
+                                <td>Física</td>
+                            </tr>
+                        </table>
+                    <p>El código fuente sería el siguiente:</p>
+                    <pre>
+                        &lt;table border="1"&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;&lt;/td&gt;
+                            &lt;td&gt;Lunes&lt;/td&gt;
+                            &lt;td&gt;Martes&lt;/td&gt;
+                            &lt;td&gt;Miércoles&lt;/td&gt;
+                            &lt;td&gt;Jueves&lt;/td&gt;
+                            &lt;td&gt;Viernes&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;10:30&lt;/td&gt;
+                            &lt;td&gt;Matemáticas&lt;/td&gt;
+                            &lt;td&gt;Geografía&lt;/td&gt;
+                            &lt;td&gt;Física&lt;/td&gt;
+                            &lt;td&gt;Dibujo&lt;/td&gt;
+                            &lt;td&gt;Matemáticas&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;11:30&lt;/td&gt;
+                            &lt;td&gt;Inglés&lt;/td&gt;
+                            &lt;td&gt;Lengua&lt;/td&gt;
+                            &lt;td&gt;Geografía&lt;/td&gt;
+                            &lt;td&gt;Química&lt;/td&gt;
+                            &lt;td&gt;Física&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </pre>
+                    <h3>Atributos "extra" de la etiqueta table</h3>
+                    <p><strong>Cellpading</strong>, especifica el espacio interior de cada celda. </p>
+                    <p><strong>Cellspacing</strong>, espacio en pixeles existente entre celda y celda. </p>
+                    <p><strong>Width</strong>, determina la anchura de la tabla y puede ser en píxeles o en porcentaje utilizando el símbolo "%".</p>
+                    <p><strong>Rules</strong>, indica los bordes de la tabla que se mostrarán.Posibilidades:</p>
+                        <ul>
+                            <li><em>none</em>: Sin líneas</li>
+                            <li><em>groups</em>: Pone líneas solo para separar las etiquetas de grupos</li>
+                            <li><em>rows</em>: Bordes horizontales entre filas</li>
+                            <li><em>cols</em>: Bordes verticales entre columnas</li>
+                            <li><em>all</em>: Todos los bordes</li>
+                        </ul>
+                    <p>No se recomienda utilizar los úlitmos 4 atributos, porque mediante CSS se pueden conseguir mejores resultados. </p>
+                    <h3>Celdas de cabecera</h3>
+                    <p>Para señalar las celdas que hacen la función de cabecera se utiliza la etiqueta <strong>&lt;th&gt;</strong></p>    
+                    <table border="1">
+                        <tr>
+                            <th></th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                        <tr>
+                            <th>10:30</th>
+                            <td>Matemáticas</td>
+                            <td>Geografía</td>
+                            <td>Física</td>
+                            <td>Dibujo</td>
+                            <td>Matemáticas</td>
+                        </tr>
+                        <tr>
+                            <th>11:30</th>
+                            <td>Inglés</td>
+                            <td>Lengua</td>
+                            <td>Geografía</td>
+                            <td>Química</td>
+                            <td>Física</td>
+                        </tr>
+                    </table>
+                    <p>El código fuente sería el siguiente:</p>
+                    <pre>
+                        &lt;table border="1"&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;&lt;/th&gt;
+                            &lt;th&gt;Lunes&lt;/th&gt;
+                            &lt;th&gt;Martes&lt;/th&gt;
+                            &lt;th&gt;Miércoles&lt;/th&gt;
+                            &lt;th&gt;Jueves&lt;/th&gt;
+                            &lt;th&gt;Viernes&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;10:30&lt;/th&gt;
+                            &lt;td&gt;Matemáticas&lt;/td&gt;
+                            &lt;td&gt;Geografía&lt;/td&gt;
+                            &lt;td&gt;Física&lt;/td&gt;
+                            &lt;td&gt;Dibujo&lt;/td&gt;
+                            &lt;td&gt;Matemáticas&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;11:30&lt;/th&gt;
+                            &lt;td&gt;Inglés&lt;/td&gt;
+                            &lt;td&gt;Lengua&lt;/td&gt;
+                            &lt;td&gt;Geografía&lt;/td&gt;
+                            &lt;td&gt;Química&lt;/td&gt;
+                            &lt;td&gt;Física&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </pre>
+                    <h3>Títulos en las tablas</h3>
+                    <p>A las tablas se les puede poner titulo utilizando la etiqueta <strong>&lt;caption&gt;</strong></p>
+                    <p>Ejemplo:</p>
+                    <table border="1">
+                        <caption>Horario</caption>
+                        <tr>
+                            <th></th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                        <tr>
+                            <th>10:30</th>
+                            <td>Matemáticas</td>
+                            <td>Geografía</td>
+                            <td>Física</td>
+                            <td>Dibujo</td>
+                            <td>Matemáticas</td>
+                        </tr>
+                        <tr>
+                            <th>11:30</th>
+                            <td>Inglés</td>
+                            <td>Lengua</td>
+                            <td>Geografía</td>
+                            <td>Química</td>
+                            <td>Física</td>
+                        </tr>
+                    </table>
+                    <p>El código fuente sería el siguiente:</p>
+                    <pre>
+                        &lt;table border="1"&gt;
+                        &lt;caption&gt;Horario&lt;/caption&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;&lt;/th&gt;
+                            &lt;th&gt;Lunes&lt;/th&gt;
+                            &lt;th&gt;Martes&lt;/th&gt;
+                            &lt;th&gt;Miércoles&lt;/th&gt;
+                            &lt;th&gt;Jueves&lt;/th&gt;
+                            &lt;th&gt;Viernes&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;10:30&lt;/th&gt;
+                            &lt;td&gt;Matemáticas&lt;/td&gt;
+                            &lt;td&gt;Geografía&lt;/td&gt;
+                            &lt;td&gt;Física&lt;/td&gt;
+                            &lt;td&gt;Dibujo&lt;/td&gt;
+                            &lt;td&gt;Matemáticas&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;11:30&lt;/th&gt;
+                            &lt;td&gt;Inglés&lt;/td&gt;
+                            &lt;td&gt;Lengua&lt;/td&gt;
+                            &lt;td&gt;Geografía&lt;/td&gt;
+                            &lt;td&gt;Química&lt;/td&gt;
+                            &lt;td&gt;Física&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </pre>
+                    <h3>Etiquetas de agrupación de elementos</h3>
+                    <p>Hay tres elementos que sirven para diferenciar las partes principales en una tabla y facilitar darle formato mas tarde a estas partes.
+                         Se utilizan las siguientes etiquetas <strong>&lt;thead&gt;</strong>, <strong>&lt;tfoot&gt;</strong>y <strong>&lt;tbody&gt;</strong>.</p>
+                    <p>Ejemplo de etiquetas de agrupación:</p>
+                    <table border="1" rules= "groups">
+                    <caption>Ventas por secciones</caption>
+                    <thead>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Hardware</td>
+                            <td> Software</td>
+                            </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td>25000</td>
+                            <td>22000</td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <th>Enero</th>
+                            <td>12000</td>
+                            <td>15000</td>
+                        </tr>
+                        <tr>
+                            <th>Febrero</th>
+                            <td>13000</td>
+                            <td>9000</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <p>El código fuente sería el siguiente:</p>
+                    <pre>
+                        &lt;table border="1" rules= "groups"&gt;
+                        &lt;caption&gt;Ventas por secciones&lt;/caption&gt;
+                        &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;&nbsp;&lt;/td&gt;
+                                &lt;td&gt;Hardware&lt;/td&gt;
+                                &lt;td&gt; Software&lt;/td&gt;
+                                &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tfoot&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;Total&lt;/th&gt;
+                                &lt;td&gt;25000&lt;/td&gt;
+                                &lt;td&gt;22000&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tfoot&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;Enero&lt;/th&gt;
+                                &lt;td&gt;12000&lt;/td&gt;
+                                &lt;td&gt;15000&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;Febrero&lt;/th&gt;
+                                &lt;td&gt;13000&lt;/td&gt;
+                                &lt;td&gt;9000&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                        &lt;/table&gt;
+                    </pre>
+                    <h3>Combinar celdas de tablas</h3>
+                    <p>Para combinar celdas se utilizan los atributos <strong>&lt;colspan&gt;</strong> (combina celdas en horizontal) y 
+                        <strong>&lt;rowspan&gt;</strong> (combina celdas en vertical), sobre las etiquetas <strong>&lt;td&gt;</strong> y <strong>&lt;th&gt;</strong>.</p>
+                    <p>Ejemplo de tabla con celdas combinadas</p>
+                    <table border="1" width="100%">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td colspan="2">&nbsp;</td>
+                            <td rowspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">&nbsp;</td>
+                            <td >&nbsp;</td>
+                            <td >&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">&nbsp;</td>                          
+                        </tr>
+                        <tr>                            
+                            <td colspan="3">&nbsp;</td>                         
+                        </tr>  
+                    </table>
+                    <p>El código fuente sería el siguiente:</p>
+                    <pre>
+                        &lt;table border="1" width="100%"&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;&nbsp;&lt;/td&gt;
+                                &lt;td&gt;&nbsp;&lt;/td&gt;
+                                &lt;td colspan="2"&gt;&nbsp;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;&nbsp;&lt;/td&gt;
+                                &lt;td colspan="2"&gt;&nbsp;&lt;/td&gt;
+                                &lt;td rowspan="2"&gt;&nbsp;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td rowspan="3"&gt;&nbsp;&lt;/td&gt;
+                                &lt;td &gt;&nbsp;&lt;/td&gt;
+                                &lt;td &gt;&nbsp;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td colspan="3"&gt;&nbsp;&lt;/td&gt;                          
+                            &lt;/tr&gt;
+                            &lt;tr&gt;                            
+                                &lt;td colspan="3"&gt;&nbsp;&lt;/td&gt;                         
+                            &lt;/tr&gt;  
+                        &lt;/table&gt;
+                    </pre>
+                    <h3>Tablas dentro de tablas</h3>
+                    <p>Para conseguir este formato de tabla hay que meter una etiqueta <strong>table</strong> con todos sus elementos dentro de un <strong>td</strong> o un <strong>th</strong>.</p>
+                    <p>Ejemplo de tabla dentro de tabla</p>
+                        <table border="1">
+                            <tr>
+                                <td>
+                                    <table border="1">
+                                        <tr>
+                                            <td>Fin</td>
+                                            <td>de</td>
+                                            <td colspan="2">semana</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>Lunes</td>
+                                <td>Martes</td>
+                                <td>Miércoles</td>
+                                <td>Jueves</td>
+                                <td>Viernes</td>
+                            </tr>
+                            <tr>
+                                <td>10:30</td>
+                                <td>Matemáticas</td>
+                                <td>Geografía</td>
+                                <td>Física</td>
+                                <td>Dibujo</td>
+                                <td>Matemáticas</td>
+                            </tr>
+                            <tr>
+                                <td>11:30</td>
+                                <td>Inglés</td>
+                                <td>Lengua</td>
+                                <td>Geografía</td>
+                                <td>Química</td>
+                                <td>Física</td>
+                            </tr>
+                        </table>
+                    <p>El código fuente sería el siguiente:</p>
+                    <pre>
+                        &lt;table border="1"&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;
+                                    &lt;table border="1"&gt;
+                                        &lt;tr&gt;
+                                            &lt;td&gt;Fin&lt;/td&gt;
+                                            &lt;td&gt;de&lt;/td&gt;
+                                            &lt;td colspan="2"&gt;semana&lt;/td&gt;
+                                        &lt;/tr&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;td&gt;Lunes&lt;/td&gt;
+                                &lt;td&gt;Martes&lt;/td&gt;
+                                &lt;td&gt;Miércoles&lt;/td&gt;
+                                &lt;td&gt;Jueves&lt;/td&gt;
+                                &lt;td&gt;Viernes&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;10:30&lt;/td&gt;
+                                &lt;td&gt;Matemáticas&lt;/td&gt;
+                                &lt;td&gt;Geografía&lt;/td&gt;
+                                &lt;td&gt;Física&lt;/td&gt;
+                                &lt;td&gt;Dibujo&lt;/td&gt;
+                                &lt;td&gt;Matemáticas&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;11:30&lt;/td&gt;
+                                &lt;td&gt;Inglés&lt;/td&gt;
+                                &lt;td&gt;Lengua&lt;/td&gt;
+                                &lt;td&gt;Geografía&lt;/td&gt;
+                                &lt;td&gt;Química&lt;/td&gt;
+                                &lt;td&gt;Física&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </pre>
+                </div>
+            </div>
+            <div id="panel_cajas" class="panel" hidden>
+				<h1>Modelo de cajas de HTML5</h1>
+                <div id="cajas">
+                    <h2>Etiquetas span y div</h2>
+                    <h3>Etiqueta div</h3>
+                    <p>La etiqueta <i>&lt;div&gt;</i>, es un elemento que se usa para agrupar un contenido. La etiqueta crea una <i>"caja"</i>, a la que se suele poner un identificador (id), para diferenciarla.</p>
+                    <p>Dentro de una etiqueta div se puede usar cualquier tipo de etiqueta, por lo que se suele usar para diferenciar partes de una página web.</p>
+                    <p>A esta etiqueta <i>&lt;div&gt;</i>; se le puede aplicar formato, ya sea de texto o de posicionamiento, y este formato se aplicará en todo el código contenido por la <i>"caja"</i>.</p>
+                    <p>Las etiquetas <i>&lt;div&gt;</i> nos proporcionan la forma más sencilla para estructurar una página web, al aplicarles formato de manera sencilla y poder mover su contenido, mediante CSS.</p>
+                    <p>Algunos de los atributos que podemos usar para dar formato a una etiqueta <i>&lt;div&gt;</i> son:</p>
+                    <ul>
+                        <li>heigh: Se usa para dar una altura a la "caja" que creamos. Si no especificamos altura, esta se adaptará al contenido de la etiqueta. Si la etiqueta está vacía, no tendrá altura ni anchura, por lo que no ocupará ningún espacio.</li>
+                        <li>width: Se usa para dar una anchura a la "caja" que creamos. Funciona igual que height</li>
+                        <li>color: cambia el color de la letra del texto que contiene la etiqueta.</li>
+                        <li>backgroud-color: cambia el color de fondo de la caja.</li>
+                        <li>margin: cambia la distacia de los márgenes. Se puede añadir -top/-bottom/-left/-right para cambiarlo del lado/s que elijamos.</li>
+                    </ul>
+                    <p>Se llama modelo de cajas, ya que las webs se estructuran con etiquetas <i>&lt;div&gt;</i> dentro de <i>&lt;div&gt;</i>, por lo que se tienen "cajas conteniendo cajas"; ya que lo más óptimo es tener cada apartado de nuetra web en un <i>&lt;div&gt;</i> diferenciativo. </p>
+                    <h3>Etiqueta span</h3>
+                    <p>Esta etiqueta es bastante parecida a la anterior, pero los navegadores no le agregan nada, ni espacios, por lo que se usa para marcar contenido específico dentro de un párrafo, a fin de darle un formato especial mediante CSS.</p>
+                    <h4>Ejemplos:</h4>
+                    <p><strong>-Ejemplo de un <i>&lt;div&gt;</i> al que se le ha dado formato para que el texto sea blanco, tenga un borde rojo y su interior sea negro:</strong></p>
+                    <div id="ejemplocaja" style="color:white; border:4px solid red; background-color:black">
+                        <p>Aquí tenemos.</p>
+                        <p>Tres párrafos.</p>
+                        <p>En un <i>&lt;div&gt;</i> con formato.</p>
+                    </div>
+                    <p>El código para este ejemplo sería el siguiente:</p>
+                    <pre>
+                        &lt;div id="ejemplocaja" style="color:white; border:4px solid red; background-color:black"&gt;
+                            &lt;p&gt;Aquí tenemos.&lt;/p&gt;
+                            &lt;p&gt;Tres párrafos.&lt;/p&gt;
+                            &lt;p&gt;En un &lt;i&gt;&lt;div&gt;&lt;/i&gt; con formato.&lt;/p&gt;
+                        &lt;/div&gt;
+                    </pre>
+                    <p><strong>-Ejemplo de un <i>&lt;span&gt;</i> al que se ha dado formato para que el texto sea rojo:</strong></p>
+                    <p>En este párrafo, <span style="color:blue">sólo esta parte,</span> es de color azul.</p>
+                    <p>El código para este ejemplo es el siguiente:</p>
+                    <p>&lt;p&gt;En este párrafo, &lt;span style="color:blue"&gt;sólo esta parte,&lt;/span&gt; es de color azul.&lt;/p&gt;</p>
+                </div>
+            </div>
+            <div id="panel_formularios" class="panel" hidden>
+				<h1>Formularios en HTML5</h1>
+                <div id="Formularios">
+                    <h2>Etiqueta Form</h2>
+                        <p>La etiqueta representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web.</p>
+                        <p>La etiqueta form tiene fundamentalmente tres atributos:</p>
+                        <ol type="I">
+                            <li>El atributo <b>Action</b> que es  el  atributo  que  contiene  la  URL  de  la  página  web  o  servicios que procesará los datos del formulario.</li>
+                            <li>El atributo <b>Method</b> que permite indicar  qué  instrucción  http  utilizaremos  para  pasar  la información al destino de nuestro formulario.</li>
+                            <ol type="i">El atributo method tiene dos opciones:
+                                <li><b>GET:</b> que genera  una  cadena  de búsqueda  en  la  URL  que  contiene  los  datos  del  formulario.</li>
+                                <li><b>POST:</b> que por su parte, pasa los datos pero de forma más oculta.</li>
+                            </ol>
+                            <li>El atributo <b>Target</b> especifica un nombre o una palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario.
+                                <p>Ejemplo:</p>
+                                <form action="/action_page.php" method="get" target="_blank">
+                                    Primer Nombre: <input type="text" name="fname"><br>
+                                    Segundo Nombre: <input type="text" name="lname"><br>
+                                    <input type="submit" value="Enviar">
+                                </form> 
+                            </li>
+                        </ol>
+                    <h2>Cuadros de texto, input type="text"</h2>
+                        <p>Los cuadros de texto permiten recoger el texto que escriba en el usuario y su sitaxis seria así:</p>
+                        <p><b>&lt;input type="text" name="nombre"/&gt;</b></p>
+                        <p>Esa sintaxis hace que salga en la página un cuadro en el que el usuario puede introducir el texto que se le pida</p>
+                        <ul>Los cuadros de texto tienen ciertos atributos como estos:
+                            <li><b>Value:</b> Da un valor inical al cuadro y se usa para indicar un texto de ayua al relleno.</li>
+                            <li><b>Id:</b> Es el identificador del cuadro. La W3C recomienda que se use id en lugar de name, pero los diseñadores usan los dos para tener mas seguridad ya que con name PHP recoge sus valores pero con id no funciona.</li>
+                        </ul>
+                        <p>Los cuadros de texto tienen ciertos atributos como estos</p>
+                        <ul>
+                            <li><b>Maxlength:</b> Este atributo nos da números como posibles valores y se usa para que nos indique el máximo de caracteres que se le permitirá escribir al usuario.</li>
+                            <li><b>Size:</b> Este atributo nos da números también como posibles valores y se usa para ajustar la anchura, en caracteres, que queremos que tenga el cuadro de texto.</li>
+                            <li><b>Value:</b> Este atributo nos da texto como posible valor y se usa para que nos permita rellenar el cuadro con un texto inicial.</li>
+                        </ul>
+                        <p>Ejemplo de Cuadro de texto:</P>
+                            <form action="control_form.php" method= "get" > 
+                                <p>Escriba su nombre y apellidos:</p>
+                            <input type="text" name="nombre"/>
+                            </form>
+                    <h2> Cuadros de contraseñas, input type="password"</h2>
+                        <p> Los cuadros de contraseñas funcionan igual que los cuadros de texto solo que oculta la información que escribimos en el cuadro, mostrándonos asteriscos o puntos.</p>
+                        <p><b>&lt;input type="password" name="nombre" /&gt;</b></p>
+                        <p> Usa los mismos atributos que la de cuadros de texto solo que, si usamos el metodo GET la contraseña se ve en la parte superior del navegador y con POST esto no ocurre, pero se podría averiguar igualmente.</p>
+                        <p>Ejemplo de Cuadro de texto:</p>
+                            <form action="control_form.php" method= "get" > 
+                                <p>Escriba su clave:</p>
+                            <input type="password" name="nombre"/>
+                            </form>
+                    <h2> Botones </h2>
+                        <p> Los botones son controles del formulario en los que no se puede escribir pero si que permiten cargar imagenes a través de su atributo src.</p>
+                        <p> Hay tres tipos de botones: </p>
+                        <p><b>Botón de envío</b></p>
+                        <p>Sirve para llevar a cabo la comunicación entre el formulario y la página que recoge sus datos.</p>
+                        <p>Su sintaxis es:</p>
+                        <p><b>&lt;input type="submit" value="texto del botón"/&gt;</b></p>
+                        <p>En cuanto se pulsa este botón, los datos del resto de controles se envían a la página receptora del formulario.</p>
+                        <p>Ejemplo de botón de envío:</p>
+                            <input type="submit" value="Enviar">
+                        <p><b>Botón de restablecer</b></p>
+                        <p>Este tipo de botones anulan los datos que se han introducido en los controles del formulario.</p>
+                        <p>Su sintaxis es:</p>
+                        <p><b>&lt;input type="reset" value="texto del botón"/&gt;</b></p>
+                        <p> Aqui un ejemplo de botón de restablecer:</p>
+                            <input type="reset" value="Restablecer">
+                        <p><b>Botón genérico</b></p>
+                        <p> Este botón no se usa en los formularios para enviar o configurar la información, si no para capturar su pulsación y responder en consecuencia.</p> 
+                        <p><b>Botón de radio</b></p>
+                        <p>Se trata de un control fácil de usar que permite elegir una de entre varias opciones.</p>
+                        <p>Ejemplo de botón de radio:</p>
+                            <form action="control_form.php" method="get">
+                                <p>Sexo:</p>
+                                <input type="radio" name="sexo" value="hombre"/>Hombre<br/>
+                                <input type="radio" name="sexo" value="mujer" />Mujer<br/>
+                            </form>
+                        <p><b>Cuadros combinados</b></p>
+                        <p> Un cuadro combinado permite el uso de una lista de opciones en la que se puede elegir el que tu desees.</p>
+                        <p> Aqui un ejemplo de cuadros combinados: </p>
+                            <form action="control_form.php" method="get" >
+                                <select name="Equipo">
+                                    <option value="JD">Joaquín Díaz</option>
+                                    <option value="AM">Álvaro Mena</option>
+                                    <option value="BC">Benigno Cantero</option>
+                                    <option value="AR">Alejandro Ruiz</option>
+                                </select>
+                            </form>                  
+                </div>
+            </div>
+            <div id="panel_enlaces" class="panel" hidden>
+				<h1>Enlaces</h1>
+                <div id="enlaces"> 
+                    <h2>¿Qué es un enlace, un vínculo, un link?</h2> 
+                    <p>Todos esos términos significan lo mismo, un apartado en el que si hacemos clic con el ratón, somos dirigidos a otra parte. Puede ser un texto (normalmente subrayado) o una imagen (sobre la que podemos hacer clic para ir a otro lugar de la web).                    
+                    Sería impensable una página web sin ningún tipo de enlace o vínculo. Vamos a describir ahora todo lo necesario para contruir enlaces en nuestros documentos, tanto enlaces internos (hacia otras partes de nuestra web) como enlaces externos (hacia otros sitios) y todas sus variantes. Aquí tenemos un ejemplo de un enlace a otra página web: <a href="https://www.w3schools.com">Visit W3Schools</a>                 
+                    </p>        
+                    <h3>Etiqueta y ruta de enlace</h3>
+                    <p>En el caso de los links, enlaces o hipervínculos utilizaremos la etiqueta <strong>&lta ...... propiedades.......&gt&lt/a&gt</strong>. La propiedad que se usa para indicar esto, es href y tras ella y entre comillas dobles es donde colocamos la ruta y el nombre del archivo de la página de destino, de este modo: <strong>&lta href="ruta-del-enlace/nombre-del-archivo-destino.extension"&gtTexto del enlace&lt/a&gt</strong>. Hay que incluir tanto la ruta como el nombre del archivo relacionado con ese documento enlazado dentro de las dobles comillas del <strong>href</strong>. Se pueden enlazar tanto otras páginas web como archivos de música, archivos de imágenes, etc.  
+                    </p>
+                    <h3>El target y su valores</h3> 
+                    <p>Al pulsar enlaces en cualquier navegador, a veces aparece la página de destino en la misma ventana del navegador y en otras ocasiones en una ventana nueva, aparte de la que estabamos viendo. Esto se consigue con la propiedad target que puede tomar los siguientes valores:
+                    <ul type="square">
+                        <li><h4>"_top"</h4>
+                            <p>Se usa esta opción cuando queremos que el archivo enlazado se muestre en una pantalla completa de la ventana eliminando los frames o marcos si los hay . Esta opción es muy recomendable si la pagina está bloqueada en un marco, cuando queramos salir del marco. 
+                            Ejemplo:  <a href="https://www.w3schools.com/"target="_blank">Visit W3Schools!</a> </p>         
+                        </li>
+                        <li><h4>"_parent"</h4>                        
+                            <p>Con esta opción la página destino se muestra en el       marco principal o marco en el que está el enlace. Ejemplo: <a href="http://www.tutores.org/" target="_parent">Abre una pagina en el mismo marco</a></p>
+                        </li>
+                        <li><h4>"_self"</h4>                        
+                            <p>Con esta tercera opción, se abre el documento vinculado en la misma ventana / pestaña en la que se hizo clicla página de destino. Es decir se mostrará en la misma ventana del navegador sin abrirse ninguna ventana aparte. Esta opción es la que se toma por defecto, la que se activa si no se indica ninguna propiedad target. Ejemplo: <a href="http://www.tutores.org/" target="_self">Abre la pagina - Self</a><br></p>
+                        </li>
+                        <li><h4>"_blank"</h4>
+                            <p>Con esta opción la página enlazada se abrirá en una ventana nueva del navegador. Resulta útil cuando queremos enviar a las visitas a una página externa, fuera de nuesta web. Así se mantendrá nuestra web abierta en otra ventana y no perdemos esa visita, pues tiene nuestra página a mano. También la puedes usar cuando quieres mostrar otra página de tu web, pero sin que el visitante pierda de vista la página en la que estaba. Ejemplo:  <a href="https://www.w3schools.com/" target="_blank">W3Schools</a></p>
+                        </li>
+                    </ul>    
+                    </p>
+                    <p>Por defecto, los colores de un enlace en cualquier navegador aparecerán así:   
+                        <ul type"circle">
+                            <li>Un enlace no visitado está subrayado y en color azul</li>
+                            <li>Un enlace visitado está subrayado y morado</li>
+                            <li>Un enlace activo está subrayado y rojo</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div id="panel_multimedia" class="panel" hidden>
+				<h1>Multimedia</h1>
+                <div id="multimedia">
+                    <p>En HTML5 podemos usar dieferentes elementos multimedia en nuestra página. Puede darse en formato de sonido, música, vídeos, películas o animaciones.</p>
+                    <p>Es muy común que las webs contengan elementos multimedia, sobretodo imágenes.</p>
+                    <p>A continuación vamos a ver cómo usar cada elemento multimedia.</p>
+                    <h3>Elemento de vídeo</h3>
+                    <p>La etiqueta &lt;video&gt; nos permite poner un vídeo en nuestra página.</p>
+                    <p>Consta de los atributos <strong>controls, width, height y autoplay</strong></p>
+                    <p>El atributo <strong>controls</strong> hace que aparezca una barra de controles en el video para parar/reanudar, o regular el volumen.</p>
+                    <p>Con width y height damos un tamaño al vídeo. Es importante ponerlos ya que si no están la página puede parpadear mientras carga el vídeo.</p>
+                    <p>Autoplay hace que el vídeo se reproduzca en cuanto se cargue.</p>
+                    <p>Aquí tenemos un ejemplo:</p>
+                    <pre>
+                    &lt;video width="320" height="240" autoplay&gt;
+                        &lt;source src="movie.mp4" type="video/mp4"&gt;
+                        &lt;source src="movie.ogg" type="video/ogg"&gt;
+                        Tu buscador no admite la etiqueta vídeo.
+                    &lt;/video&gt;
+                    </pre>
+                    <p>En el ejemplo vemos los atributos de altura y anchura y el de reproducción automática. Con <strong>source</strong> llamamos al archivo de video que queremos reproducir. Si ponemos varios archivos, el buscador reproducirá el primero que reconozca. Es interesante poner varios archivos con diferentes extensiones para reducir la probabilidad de que haya un error. El texto que pongamos entre las etiquetas de vídeo, sólo se verá si el buscador no admite esta etiqueta.</p> 
+                    <h3>Elemento de audio</h3>
+                    <p>La etiqueta &lt;audio&gt; nos permite añadir audio a la web.</p>
+                    <p>Funciona del mismo modo que la etiqueta de vídeo</p>
+                    <p>Como atributos tan solo dispone de <strong>controls</strong>, que nos da controles del mismo tipo que con el audio.</p>
+                </div>
+            </div>
+            <div id="panel_canvas" class="panel" hidden>
+				<h1>Canvas</h1>
+                <div id="canvas">
+                    <p>La etiqueta <i>&lt;canvas&gt;</i> se usa para dibujar en HMTL. La traducción de canvas al español es "lienzo", por lo que diríamos que esta etiqueta crea un área, la cual usamos como lienzo para dibujar.</p>
+                    <p>Esta etiqueta funciona con el lenguaje JavaScript, con el cual hacemos los dibujos, ya que el elemento <i>&lt;canvas&gt;</i> en sí simplemente crea el área de dibujo.</p>
+                    <p>En este lienzo se pueden dibujar líneas, cajas, círculos, texto y añadir imágenes.</p>
+                    <p>A parte de dibujos en 2D, canvas también permite dibujar en él con un contexto en 3D, por lo que podemos crear cualquier dibujo, incluso se podría hacer un videojuego en 3D.</p>
+                    <p>Como funciona mediante scripts, es necesario siempre poner un id al canvas para poder referirnos a él, y ponerle una altura y anchura. También se le puede añadir un borde.</p>
+                    <h4>Ejemplo de un canvas listo para dibujar en él:</h4>
+                    <canvas id="lienzo" width="200" height="100" style="border:1px solid black;"></canvas> 
+                    <p>El código par hacerlo es:</p>
+                    <p>&lt;canvas id="lienzo" width="200" height="100" style="border:1px solid black;"&gt;&lt;/canvas&gt;</p>
+                    <p>*Los atributos indican, por orden: anchura, altura, y ancho, estilo y color del borde.</p>
+                </div>
+            </div>
+            <!-- Accesibilidad -->
+            <div id="panel_wcag" class="panel" hidden>
+				<h1>WCAG</h1>
+                <div id="WACG">
+                        <div id="intro 1.0">
+                            <h2>Accesibilidad del contenido en la Web</h2>
+                            <h3>WCAG 1.0</h3>
+                            <p>La Iniciativa para la Accesibilidad Web, <i>Web Accessibility Initiative (WAI) en inglés</i>, es una iniciativa del <i>World Wide Web Consortium (W3C)</i> que tiene como objetivo facilitar el acceso de las personas con discapacidad, desarrollando pautas de accesibilidad, mejorando las herramientas para la evaluación y reparación de accesibilidad Web, llevando a cabo una labor educativa y de concienciación en relación a la importancia del diseño accesible de páginas Web, y abriendo nuevos campos en accesibilidad a través de la investigación en este área.</p>
+                            <p>La WAI fue anunciada el 7 de abril de 1997 <a href="https://www.w3.org/Press/WAI-Launch.html"target="_blank">(World Wide Web Consortium (W3C) Launches International Web Accessibility Initiative)</a>.</p>
+                            <p>El <a href"https://www.w3.org/WAI/"target="_blank">WAI</a> trabaja con organizaciones de todo el mundo con el fin de desarrollar estrategias, pautas y crear recursos y herramientas que ayuden a hacer la Web accesible a las personas con discapacidad.</p>
+                            <p>Web Content Accessibility Guidelines 1.0 (WCAG 1.0) es una recomendación del 5 de mayo de 1999 del W3C que explica cómo hacer el contenido web accesible a las personas con discapacidad.</p>
+                            <p>Hasta el momento, WCAG 1.0 es reconocido como el estándar de facto a nivel internacional en cuanto a accesibilidad web. Incluso, se ha convertido en el estándar de iure en muchos países, como en el caso de España. Desafortunadamente, WCAG 1.0 puede ser difícil de entender para el principiante y puede parecerle algo abrumador y que se le escapa de las manos por la amplitud de temas que cubre. Para evitar esta situación, el <a href "https://www.w30.org/"target="_blank">W3C</a> proporciona el <a href="https://www.w3.org/WAI/wcag-curric/"target="_blank">Curriculum for Web Content Accessibility Guidelines 1.0</a>, un tutorial lleno de explicaciones y ejemplos.</p>
+                        </div>            
+                        <div id="pautas 1.0">
+                            <h3>Pautas de Accesibilidad al contenido WEB 1.0</h3>            
+                            <p>Las Pautas de Accesibilidad al Contenido en la Web 1.0 (traducción al castellano de <a href="https://www.w3.org/TR/WCAG10/"target="_blank">Web Content Accessibility Guidelines 1.0</a>) del W3C están compuestas de 14 pautas, que son los principios generales del diseño accesible:</p>
+                            <ol type="1">
+                                <li>
+                                    <p><strong>Proporcione alternativas equivalentes para el contenido visual y auditivo.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>Los textos alternativos al contenido visual o auditivo benefician a personas ciegas y/o sordas y a aquellos usuarios que deciden anular la descarga de imágenes y/o sonidos (velocidad de acceso a Internet limitada).</p>
+                                        </li>
+                                        <li>
+                                            <p>Los equivalentes no textuales, como pueden ser dibujos o vídeos, benefician a personas analfabetas o con dificultades en la lectura.</p>
+                                        </li>
+                                    </ul>
+                                <li>
+                                    <p><strong>No se base sólo en el color.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>Los textos y gráficos deben comprenderse sin necesidad de ver los colores. El cumplimiento de esta pauta beneficia a personas con dificultades para ver los colores y a usuarios que utilizan pantallas monocromáticas.</p>
+                                        </li>
+                                    </ul>    
+                                </li>
+                                <li>
+                                    <p><strong>Utilice marcadores y hojas de estilo y hágalo apropiadamente.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>El control de la presentación de los contenidos se debe realizar con hojas de estilo en vez de con elementos y atributos de presentación. Con el uso de marcadores de presentación los usuarios que utilizan software especializado tendrán dificultades para entender la estructura de la página.</p>
+                                        </li>
+                                    </ul>    
+                                </li>
+                                <li>
+                                    <p><strong>Identifique el idioma usado </strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p> Esta pauta implica usar marcadores que faciliten la pronunciación o interpretación de texto abreviado o extranjero. Se debe indicar el idioma predominante en cada página y marcar aquellas expresiones que se encuentren en otra lengua. De esta forma, los sintetizadores de voz son capaces de cambiar su pronunciación en función del idioma siempre y cuando se usen los marcadores apropiados.</p>
+                                        </li>
+                                    </ul>   
+                                </li>
+                                <li>
+                                    <p><strong>Cree tablas que se transformen correctamente.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>Las tablas sólo se utilizan para marcar información tabular (tablas de datos). El uso de tablas con otros fines crea dificultades para los usuarios que usan lectores de pantalla. De igual forma, las tablas mal estructuradas (por ejemplo, sin encabezados <th>) dificultan la lectura a usuarios que no pueden visualizar la información de forma global: ciegos con lectores de pantalla y/o dispositivos braille, deficientes visuales que utilizan magnificadores de pantalla o usuarios con dispositivos de pantalla pequeña. </p>
+                                        </li>
+                                    </ul>                           
+                                </li>
+                                <li>
+                                    <p><strong>Asegúrese de que las páginas que incorporen nuevas tecnologías se transformen correctamente.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>Una página basada en tecnologías modernas tiene que ser accesible al desconectarla o al visualizarla con navegadores antiguos. El usuario puede desconectar las tecnologías más modernas para ganar en rapidez de descarga. Sin embargo, los contenidos deben permanecer accesibles.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><strong>Asegure al usuario el control sobre los cambios de los contenidos tempo-dependientes.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>El movimiento de los objetos o páginas, su parpadeo o actualización automática deben ser controlados por el usuario. Las personas con discapacidades cognitivas o visuales no pueden leer textos en movimiento. De forma similar, algunos discapacitados físicos no pueden interactuar con objetos móviles (limitaciones motrices).</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><strong>Asegure la accesibilidad directa de las interfaces incrustadas. </strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>Cuando un objeto incrustado (flash, applet) tiene su "propia interfaz", ésta (al igual que la interfaz de su navegador) debe ser accesible. Si la interfaz del objeto incrustado no puede hacerse accesible, debe proporcionarse una solución alternativa accesible.</p>
+                                        </li>
+                                    </ul>                       
+                                </li>
+                                <li>
+                                    <p><strong>Diseñe para la independencia del dispositivo.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>Esta pauta significa que el usuario puede interactuar con la aplicación de usuario o el documento con un dispositivo de entrada (o salida) preferido - ratón, teclado, voz, puntero de cabeza (licornio) u otro. Si, por ejemplo, un control de formulario sólo puede ser activado con un ratón u otro dispositivo de apuntamiento, alguien que use la página sin verla, con entrada de voz, con teclado o quien utilice otro dispositivo de entrada que no sea de apuntamiento, no será capaz de utilizar el formulario.</p>
+                                        </li>
+                                    </ul>                       
+                                </li>
+                                <li>
+                                    <p><strong>Utilice soluciones provisionales.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>Las alternativas accesibles sólo son imprescindibles hasta que los antiguos navegadores y las ayudas técnicas operen correctamente.</p>
+                                        </li>
+                                    </ul>                                 
+                                </li>
+                                <li>
+                                    <p><strong>Utilice las tecnologías y pautas W3C.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            </p>Cuando no se pueda usar una tecnología W3C o al usarla se obtengan materiales que no se transformen correctamente, se debe proporcionar una versión alternativa. Se recomiendan las tecnologías W3C por incluir características accesibles incorporadas, estar desarrolladas en un proceso abierto consensuado y porque se utilizan como base para crear contenidos accesibles.</p>
+                                        </li>
+                                    </ul>                                 
+                                </li>
+                                <li>
+                                    <p><strong>Proporcione información de contexto y orientación.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>Esta información ayuda al usuario a comprender páginas o elementos complejos. Se deben agrupar los elementos y ofrecer información contextual sobre la relación entre elementos. Esta acción es fundamental para discapacitados cognitivos y visuales.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><strong>Proporcione mecanismos claros de navegación.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>Estos mecanismos facilitan a todos los usuarios la búsqueda de aquella información que necesitan (fundamental para discapacitados cognitivos y visuales). Ejemplos: mapa web, ayuda, barras de navegación, etc.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p><strong>Asegúrese de que los documentos sean claros y simples.</strong></p>
+                                    <ul type="circle">
+                                        <li>
+                                            <p>La utilización de lenguaje claro y simple facilita la comunicación de información. El acceso a la información escrita puede ser difícil para discapacitados cognitivos o con dificultad de aprendizaje y para personas sordas o que hablan en una lengua extranjera. La comprensión de un documento también depende de la maquetación de la página y de los gráficos (que deben llevar un texto alternativo).</p>
+                                        </li>
+                                    </ul>
+                                </li>     
+                            </ol>
+                            <p>Cada pauta tiene uno o más <strong>puntos de verificación</strong> que explican cómo se aplica la pauta en determinadas áreas. En la siguiente <a href="http://accesibilidadweb.dlsi.ua.es/?menu=puntos-1.0"target="_blank">Tabla de puntos de verificación</a> están todos los puntos de verificación ordenados por nivel del prioridad y por elemento del documento (imagen, tabla, marco, etc.) al que hace referencia.</p>  
+                        </div>
+                        <div id="verificación 1.0">
+                            <h3>Pautas y puntos de verificación de WCAG 1.0</h3>
+                            <ol type="1">
+                                <li><a href="#alternativas">Proporcione alternativas equivalentes para el contenido visual y auditivo</a></li>
+                                <li><a href="#color">No se base sólo en el color</a></li>
+                                <li><a href="#marcadores">Utilice marcadores y hojas de estilo y hágalo apropiadamente</a></li>
+                                <li><a href="#idoma">Identifique el idioma usado</a></li>
+                                <li><a href="#tablas">Cree tablas que se transformen correctamente</a></li>
+                                <li><a href="#tecnologias">Asegúrese de que las páginas que incorporen nuevas tecnologías se transformen correctamente</a></li>
+                                <li><a href="#control">Asegure al usuario el control sobre los cambios de los contenidos tempo-dependientes</a></li>
+                                <li><a href="#accesibilidad">Asegure la accesibilidad directa de las interfaces incrustadas</a></li>
+                                <li><a href="#independiente">Diseñe para la independencia del dispositivo</a></li>
+                                <li><a href="#provisionales">Utilice soluciones provisionales</a></li>
+                                <li><a href="#pautas">Utilice las tecnologías y pautas W3C</a></li>
+                                <li><a href="#info">Proporcione información de contexto y orientación</a></li>
+                                <li><a href="#mecanismos">Proporcione mecanismos claros de navegación</a></li>
+                                <li><a href="#claridad">Asegúrese de que los documentos sean claros y simples</a></li>    
+                            </ol>
+                                
+                            <u><b><a name="alternativas">1. Proporcione alternativas equivalentes para el contenido visual y auditivo</a></b></u> 
+                                <p>1.1 Proporcione un texto equivalente para todo elemento no textual (Por ejemplo, a través de "alt", "longdesc" o en el contenido del elemento). Esto incluye: imágenes, representaciones gráficas del texto, mapas de imagen, animaciones (Por ejemplo, GIFs animados), "applets" y objetos programados, "ascii art", marcos, scripts, imágenes usadas como viñetas en las listas, espaciadores, botones gráficos, sonidos (ejecutados con o sin interacción del usuario), archivos exclusivamente auditivos, banda sonora del vídeo y vídeos. <strong>[Prioridad 1]</strong></p>
+                                <p>1.2 Proporcione vínculos redundantes en formato texto para cada zona activa de un mapa de imagen del servidor. <strong>[Prioridad 1]</strong></strong></p>
+                                <p>1.3 Hasta que las aplicaciones de usuario puedan leer en voz alta automáticamente el texto equivalente de la banda visual, proporcione una descripción auditiva de la información importante de la banda visual de una presentación multimedia.<strong> [Prioridad 1]</strong></p>
+                                <p>1.4 Para toda presentación multimedia tempodependiente (por ejemplo, una película o animación) sincronice alternativas equivalentes (por ejemplo, subtítulos o descripciones de la banda visual) con la presentación. <strong>[Prioridad 1]</strong></p>
+                                <p>1.5 Hasta que las aplicaciones de usuario interpreten el texto equivalente para los vínculos de los mapas de imagen de cliente, proporcione vínculos de texto redundantes para cada zona activa del mapa de imagen de cliente. <strong>[Prioridad 3]</strong></p>
+                            <u><b><a name="color">2. No se base sólo en el color</a></b></u>
+                                <p>2.1 Asegúrese de que toda la información transmitida a través de los colores también esté disponible sin color, por ejemplo mediante el contexto o por marcadores.<strong>[Prioridad 1]</strong></p>
+                                <p>2.2 Asegúrese de que las combinaciones de los colores de fondo y primer plano tengan el suficiente contraste para que sean percibidas por personas con deficiencias de percepción de color o en pantallas en blanco y negro.<strong>[Prioridad 2 para las imágenes. Prioridad 3 para los textos]</strong></p>
+                            <u><b><a name="marcadores">3. Utilice marcadores y hojas de estilo y hágalo apropiadamente</a></b></u>
+                                <p>3.1 Cuando exista un marcador apropiado, use marcadores en vez de imágenes para transmitir la información.<strong>[Prioridad 2]</strong></p>
+                                <p>3.2 Cree documentos que estén validados por las gramáticas formales publicadas.<strong>[Prioridad 2]</strong></p>
+                                <p>3.3 Utilice hojas de estilo para controlar la maquetación y la presentación.<strong>[Prioridad 2]</strong></p>
+                                <p> 3.4 Utilice unidades relativas en lugar de absolutas al especificar los valores en los atributos de los marcadores de lenguaje y en los valores de las propiedades de las hojas de estilo.<strong>[Prioridad 2]</strong></p>
+                                <p>3.5 Utilice elementos de encabezado para transmitir la estructura lógica y utilícelos de acuerdo con la especificación.<strong>[Prioridad 2]</strong></p>
+                                <p>3.6 Marque correctamente las listas y los ítems de las listas.<strong>[Prioridad 2]</strong></p>
+                                <p>3.7 Marque las citas. No utilice el marcador de citas para efectos de formato tales como sangrías.<strong>[Prioridad 2]</strong></p>
+                            <u><b><a name="idioma">4. Identifique el idioma usado</a></b></u>
+                                <p>4.1 Identifique claramente los cambios en el idioma del texto del documento y en cualquier texto equivalente (por ejemplo, leyendas).<strong>[Prioridad 1]</strong></p>
+                                <p>4.2 Especifique la expansión de cada abreviatura o acrónimo cuando aparezcan por primera vez en el documento.<strong>[Prioridad 3]</strong></p>
+                                <p> 4.3 Identifique el idioma principal de un documento.<strong>[Prioridad 3]</strong></p>
+                            <u><b><a name="tablas">5. Cree tablas que se transformen correctamente</a></b></u>
+                                <p>5.1 En las tablas de datos, identifique los encabezamientos de fila y columna.<strong>[Prioridad 1]</strong></p>
+                                <p>5.2 Para las tablas de datos que tienen dos o más niveles lógicos de encabezamientos de fila o columna, utilice marcadores para asociar las celdas de encabezamiento y las celdas de datos.<strong>[Prioridad 1]</strong></p>
+                                <p>5.3 No utilice tablas para maquetar, a menos que la tabla tenga sentido cuando se alinee. Por otro lado, si la tabla no tiene sentido, proporcione una alternativa equivalente (la cual debe ser una versión alineada).<strong>[Prioridad 2]</strong></p>
+                                <p>5.4 Si se utiliza una tabla para maquetar, no utilice marcadores estructurales para realizar un efecto visual de formato.<strong>[Prioridad 2]</strong></p>
+                                <p>5.5 Proporcione resúmenes de las tablas.<strong>[Prioridad 3]</strong></p>
+                                <p>5.6 Proporcione abreviaturas para las etiquetas de encabezamiento.<strong>[Prioridad 3]</strong></p>
+                            <u><b><a name="tecnologias">6. Asegúrese de que las páginas que incorporen nuevas tecnologías se transformen correctamente</a></b></u>
+                                <p>6.1 Organice el documento de forma que pueda ser leído sin hoja de estilo. Por ejemplo, cuando un documento HTML es interpretado sin asociarlo a una hoja de estilo, tiene que ser posible leerlo.<strong>[Prioridad 1]</strong></p>
+                                <p>6.2 Asegúrese de que los equivalentes de un contenido dinámico son actualizados cuando cambia el contenido dinámico.<strong>[Prioridad 1]</strong></p>
+                                <p>6.3 Asegure que las páginas sigan siendo utilizables cuando se desconecten o no se soporten los scripts, applets u otros objetos programados. Si esto no es posible, proporcione información equivalente en una página alternativa accesible.<strong>[Prioridad 1]</strong></p>
+                                <p>6.4 Para los scripts y applets, asegúrese de que los manejadores de eventos sean independientes del dispositivo de entrada.<strong>[Prioridad 2]</strong></p>
+                                <p>6.5 Asegúrese de que los contenidos dinámicos son accesibles o proporcione una página o presentación alternativa.<strong>[Prioridad 2]</strong></p>  
+                            <u><b><a name="control">7. Asegure al usuario el control sobre los cambios de los contenidos tempo-dependientes</a></b></u>
+                                <p>7.1 Hasta que las aplicaciones de usuario permitan controlarlo, evite provocar destellos en la pantalla.<strong>[Prioridad 1]</strong></p>
+                                <p>7.2 Hasta que las aplicaciones de usuario permitan controlarlo, evite el parpadeo del contenido (por ejemplo, cambio de presentación en periodos regulares, así como el encendido y apagado).<strong>[Prioridad 2]</strong></p>
+                                <p>7.3 Hasta que las aplicaciones de usuario permitan congelar el movimiento de los contenidos, evite los movimientos en las páginas.<strong>[Prioridad 2]</strong></p>
+                                <p>7.4 Hasta que las aplicaciones de usuario proporcionen la posibilidad de detener las actualizaciones, no cree páginas que se actualicen automáticamente de forma periódica.<strong>[Prioridad 2]</strong></p>
+                                <p>7.5 Hasta que las aplicaciones de usuario proporcionen la posibilidad de detener el redireccionamiento automático, no utilice marcadores para redirigir las páginas automáticamente. En su lugar, configure el servidor para que ejecute esta posibilidad.<strong>[Prioridad 2]</strong></p>    
+                            <u><b><a name="accesibilidad">8. Asegure la accesibilidad directa de las interfaces incrustadas</a></b></u>
+                                <p>8.1 Haga los elementos de programación, tales como scripts y applets, directamente accesibles o compatibles con las ayudas técnicas.<strong>[Prioridad 1 si la funcionalidad es importante y no se presenta en otro lugar; de otra manera, Prioridad 2]</strong></p>
+                            <u><b><a name="independiente">9. Diseñe para la independencia del dispositivo</a></b></u>
+                                <p>9.1 Proporcione mapas de imagen controlados por el cliente en lugar de por el servidor, excepto donde las zonas sensibles no puedan ser definidas con una forma geométrica.<strong>[Prioridad 1]</strong></p>
+                                <p>9.2 Asegúrese de que cualquier elemento que tiene su propia interfaz pueda manejarse de forma independiente del dispositivo.<strong>[Prioridad 2]</strong></p>
+                                <p>9.3 Para los "scripts", especifique manejadores de evento lógicos mejor que manejadores de evento dependientes de dispositivos.<strong>[Prioridad 2]</strong></p>
+                                <p>9.4 Cree un orden lógico para navegar con el tabulador a través de vínculos, controles de formulario y objetos.<strong>[Prioridad 3]</strong></p>
+                                <p>9.5 Proporcione atajos de teclado para los vínculos más importantes (incluidos los de los mapas de imagen de cliente), los controles de formulario y los grupos de controles de formulario.<strong>[Prioridad 3]</strong></p>
+                            <u><b><a name="provisionales">10. Utilice soluciones provisionales</a></b></u>
+                                <p>10.1 Hasta que las aplicaciones de usuario permitan desconectar la apertura de nuevas ventanas, no provoque apariciones repentinas de nuevas ventanas y no cambie la ventana actual sin informar al usuario.<strong>[Prioridad 2]</strong></p>
+                                <p>10.2 Hasta que las aplicaciones de usuario soporten explícitamente la asociación entre control de formulario y etiqueta, para todos los controles de formularios con etiquetas asociadas implícitamente, asegúrese de que la etiqueta está colocada adecuadamente.<strong>[Prioridad 2]</strong></p>
+                                <p>10.3 Hasta que las aplicaciones de usuario (incluidas las ayudas técnicas) interpreten correctamente los textos contiguos, proporcione un texto lineal alternativo (en la página actual o en alguna otra) para todas las tablas que maquetan texto en paralelo, en columnas de palabras.<strong>[Prioridad 3]</strong></p>
+                                <p>10.4 Hasta que las aplicaciones de usuario manejen correctamente los controles vacíos, incluya caracteres por defecto en los cuadros de edición y áreas de texto.<strong>[Prioridad 3]</strong></p>
+                                <p>10.5 Hasta que las aplicaciones de usuario (incluidas las ayudas técnicas) interpreten claramente los vínculos contiguos, incluya caracteres imprimibles (rodeados de espacios), que no sirvan como vínculo, entre los vínculos contiguos.<strong>[Prioridad 3]</strong></p>
+                            <u><b><a name="pautas">11. Utilice las tecnologías y pautas W3C</a></b></u>
+                                <p>11.1 Utilice tecnologías W3C cuando estén disponibles y sean apropiadas para la tarea y use las últimas versiones que sean soportadas.<strong>[Prioridad 2]</strong></p>
+                                <p>11.2 Evite características desaconsejadas por las tecnologías W3C.<strong>[Prioridad 2]</strong></p>
+                                <p>11.3 Proporcione la información de modo que los usuarios puedan recibir los documentos según sus preferencias (por ejemplo, idioma, tipo de contenido, etc.).<strong>[Prioridad 3]</strong></p>
+                                <p>11.4 Si, después de los mayores esfuerzos, no puede crear una página accesible, proporcione un vínculo a una página alternativa que use tecnologías W3C, sea accesible, tenga información (o funcionalidad) equivalente y sea actualizada tan a menudo como la página (original) inaccesible.<strong>[Prioridad 1]</strong></p>
+                            <u><b><a name="info">12. Proporcione información de contexto y orientación</a></b></u>
+                                <p>12.1 Titule cada marco para facilitar su identificación y navegación.<strong>[Prioridad 1]</strong></p>
+                                <p>12.2 Describa el propósito de los marcos y cómo éstos se relacionan entre sí, si no resulta obvio solamente con el título del marco.<strong>[Prioridad 2]</strong></p>
+                                <p>12.3 Divida los bloques largos de información en grupos más manejables cuando sea natural y apropiado.<strong>[Prioridad 2]</strong></p>
+                                <p>12.4 Asocie explícitamente las etiquetas con sus controles.<strong>[Prioridad 2]</strong></p>
+                            <u><b><a name="mecanismos">13. Proporcione mecanismos claros de navegación</a></b></u>
+                                <p>13.1 Identifique claramente el objetivo de cada vínculo.<strong>[Prioridad 2]</strong></p>
+                                <p>13.2 Proporcione metadatos para añadir información semántica a las páginas y sitios.<strong>[Prioridad 2]</strong></p>
+                                <p>13.3 Proporcione información sobre la maquetación general de un sitio (por ejemplo, mapa del sitio o tabla de contenidos).<strong>[Prioridad 2]</strong></p>
+                                <p>13.4 Utilice los mecanismos de navegación de forma coherente.<strong>[Prioridad 2]</strong></p>
+                                <p>13.5 Proporcione barras de navegación para destacar y dar acceso al mecanismo de navegación.<strong>[Prioridad 3]</strong></p>
+                                <p>13.6 Agrupe los vínculos relacionados, identifique el grupo (para las aplicaciones de usuario) y, hasta que las aplicaciones de usuario lo hagan, proporcione una manera de evitar el grupo.<strong>[Prioridad 3]</strong></p>
+                                <p>13.7 Si proporciona funciones de búsqueda, permita diferentes tipos de búsquedas para diversos niveles de habilidad y preferencias.<strong>[Prioridad 3]</strong></p>
+                                <p>13.8 Localice la información destacada al principio de los encabezamientos, párrafos, listas, etc.<strong>[Prioridad 3]</strong></p>
+                                <p>13.9 Proporcione información sobre las colecciones de documentos (por ejemplo, los documentos que comprendan múltiples páginas).<strong>[Prioridad 3]</strong></p>
+                                <p>13.10 Proporcione un medio para saltar sobre un ASCII art de varias líneas.<strong>[Prioridad 3]</strong></p>
+                            <u><b><a name="claridad">14. Asegúrese de que los documentos sean claros y simples</a></b></u>
+                                <p>14.1 Utilice el lenguaje apropiado más claro y simple para el contenido de un sitio.<strong>[Prioridad 1]</strong></p>
+                                <p>14.2 Complemente el texto con presentaciones gráficas o auditivas cuando ello facilite la comprensión de la página.<strong>[Prioridad 3]</strong></p>
+                                <p>14.3 Cree un estilo de presentación que sea coherente para todas las páginas.<strong>[Prioridad 3]</strong>
+                                </p>
+                        </div>
+                        <div id="intro 2.0">
+                                <h2>Accesibilidad del contenido en la Web</h2>
+                                <h3>WCAG 2.0</h3>
+                                <p>Las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.0 (traducción al castellano de Web Content Accessibility Guidelines 2.0) es la última versión de las pautas de accesibilidad del contenido en la Web del World Wide Web Consortium (W3C). El 11 de diciembre de 2008 se publicó la recomendación definitiva después de un proceso de elaboración de casi 10 años. El 15 de octubre de 2012 se anunció que las Pautas de accesibilidad al contenido web 2.0 habían sido aprobadas como estándar internacional <a href="https://www.iso.org/standard/58625.html"target="blank">ISO/IEC 40500:2012.</a> </p>
+                            </div>
+                            <div id="pautas de accesibilidad">
+                                <h4>Pautas de accesibilidad al contenido web 2.0 (WCAG 2.0)</h4>
+                                <p><a href="https://www.w3.org/TR/WCAG20/"target="_blank">Web Content Accessibility Guidelines 2.0 (WCAG 2.0)</a> se compone de <a href="#principios">4 principios, 12 directrices</a> y 61 criterios de cumplimiento (éxito), más un número no determinado de técnicas suficientes y técnicas de asesoramiento:</p>
+                                <ol type="1">
+                                    <li><p><strong>Principio 1: Perceptibilidad</strong> - La información y los componentes de la interfaz de usuario deben presentarse a los usuarios de la manera en que puedan percibirlos.<i>(4 directrices y 22 criterios de cumplimiento.)</i></p>
+                                    </li>
+                                    <li><p><strong>Principio 2: Operabilidad</strong> - Los componentes de la interfaz de usuario y la navegación deben ser operables <i>(4 directrices y 20 criterios de cumplimiento)</i>.</p></li>
+                                    <li><p><strong>Principio 3: Comprensibilidad</strong>- La información y el manejo de la interfaz de usuario deben ser comprensibles <i>(3 directrices y 17 criterios de cumplimiento).</i></p></li>
+                                    <li><p><strong>Principio 4: Robustez</strong>- El contenido debe ser lo suficientemente robusto como para confiarse en su interpretación por parte de una amplia variedad de agentes de usuario, incluidas las tecnologías asistivas <i>(1 directriz y 2 criterios de cumplimiento)</i></i></p></li>
+                                </ol>
+                            </div>
+                            <div id="principios y directrices">
+                                <h4><a name="principios">Principios y directrices de WCAG 2.0</a></h4>
+                                <h5><strong>Principio 1. Perceptible</strong>: la información y los componentes de la interfaz de usuario deben ser mostrados a los usuarios en formas que ellos puedan entender.</h5>
+                                <ul type="square">
+                                    <li><p><strong>Directriz 1.1: Texto alternativo:</strong> Proporciona texto alternativo para el         contenido que no sea textual, así podrá ser transformado en otros formatos que la gente necesite,    como caracteres grandes, lenguaje braille (braile no es correcto), lenguaje oral, símbolos o         lenguaje más simple.</p>
+                                    </li>
+                                    <li><p><strong>Directriz 1.2: Contenido multimedia dependiente del tiempo:</strong> Proporcione alternativas sincronizadas para contenidos multimedia sincronizados dependientes del tiempo.</p>
+                                    </li>
+                                    <li><p><strong>Directriz 1.3: Adaptable:</strong> Crear contenido que pueda ser presentado de diferentes formas sin perder ni información ni estructura.</p>
+                                    </li>
+                                    <li><p><strong>Directriz 1.4: Distinguible:</strong> Facilitar a los usuarios ver y escuchar el contenido incluyendo la distinción entre lo más y menos importante.</p>
+                                    </li>
+                                </ul>
+                                <h5><strong>Principio 2. Operable:</strong> Los componentes de la interfaz de usuario y la navegación debe ser manejable.</h5>
+                                <ul type="square">
+                                    <li><p><strong>Directriz 2.1: Teclado accesible:</strong> Poder controlar todas las funciones desde el teclado.</p>
+                                    </li>
+                                    <li><p><strong>Directriz 2.2 Tiempo suficiente:</strong> Proporciona tiempo suficiente a los usuarios para leer y utilizar el contenido.</p>
+                                    </li>
+                                    <li><p><strong>Directriz 2.3: Ataques epilépticos:</strong> No diseñar contenido que pueda causar ataques epilépticos.</p>
+                                    </li>
+                                    <li><p><strong>Directriz 2.4: Navegación:</strong> Proporciona formas para ayudar a los usuarios a navegar, a buscar contenido y a determinar donde están estos.</p>
+                                    </li>
+                                </ul>
+                                <h5><strong>Principio 3: Comprensible.</strong> La información y las operaciones de usuarios deben ser comprensibles.</h5>
+                                <ul type="square">
+                                    <li><p><strong>Directriz 3.1: Legible.</strong> Hacer contenido de texto legible y comprensible.</p>
+                                    </li>
+                                    <li><p><strong>Directriz 3.2 Previsible:</strong> Hacer la apariencia y la forma de utilizar las páginas web previsibles.</p>
+                                    </li>
+                                    <li><p><strong>Directriz 3.3 Asistencia a la entrada de datos:</strong>los usuarios de ayuda evitarán y corregirán errores.</p>
+                                    </li>
+                                </ul>
+                                <h5><strong>Principio 4: Robustez:</strong> el contenido deber ser suficientemente robusto para que pueda ser bien interpretado por una gran variedad de agentes de usuario, incluyendo tecnologías de asistencia.</h5>
+                                <ul type="square">
+                                    <li><p><strong>Directriz 4.1 Compatible:</strong> Maximiza la compatibilidad con los agentes de usuario actuales y futuros, incluyendo tecnologías de asistencia.</p>
+                                    </li>
+                                </ul>         
+                            </div>
+                            <h4>Niveles de adecuación de WCAG 2.0</h4>
+                            <p>Las directrices se componen de <strong>criterios de cumplimiento</strong> (<em>success criteria</em>). Cada criterio de cumplimiento tiene un nivel de adecuación o conformidad (A, AA o AAA) que indica su impacto en la accesibilidad.</p>
+                            <p>Según <a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a>, para que una página web sea conforme con las WCAG 2.0, deben satisfacerse todos los requisitos de conformidad siguientes:</p>
+                            <ol>
+                                <li><strong>Nivel de conformidad:</strong>
+                                Uno de los siguientes niveles de conformidad se satisface por completo.
+                                <ul>
+                                    <li><strong>Nivel A:</strong> Para lograr conformidad con el Nivel A (el mínimo), la página web satisface todos los Criterios de Conformidad del Nivel A,
+                                    o proporciona una <a href="?menu=version-alternativa-conforme">versión alternativa conforme</a>.
+                                    </li>
+                              
+                                    <li><strong>Nivel AA:</strong> Para lograr conformidad con el Nivel AA, la página web satisface todos los Criterios de Conformidad de los Niveles A y AA,
+                                    o proporciona una <a href="?menu=version-alternativa-conforme">versión alternativa conforme</a> al Nivel AA.
+                                    </li>
+                              
+                                    <li><strong>Nivel AAA:</strong> Para lograr conformidad con el Nivel AAA, la página web satisface todos los Criterios de Conformidad de los Niveles A, AA y AAA,
+                                    o proporciona una <a href="?menu=version-alternativa-conforme">versión alternativa conforme</a> al Nivel AAA.
+                                    </li>
+                                </ul>
+                                </li>                              
+                                <li><strong>Páginas completas:</strong>
+                                La conformidad (y los niveles de conformidad) se aplican a las páginas web completas, y no pueden ser alcanzadas si se excluye una parte de la página.
+                                </li>
+                                <li><strong>Procesos completos:</strong>
+                                Cuando una página web es parte de una serie de páginas web que presentan un proceso
+                                (es decir, una secuencia de pasos que es necesario completar para realizar una actividad),
+                                todas las páginas en ese proceso deben ser conformes con el nivel especificado o uno superior. (No es posible lograr conformidad con un nivel en particular si una de las páginas del proceso no cumple con ese nivel o uno superior).
+                                </li>
+                                <li><strong>Uso exclusivo de tecnologías de modo compatible con la accesibilidad:</strong>
+                                Sólo se puede depender de las tecnologías usadas de forma compatible con la accesibilidad para  satisfacer los criterios de conformidad.
+                                Toda información o funcionalidad que se proporcione de una forma que no sea compatible con la accesibilidad debe estar disponible de una forma que sí sea compatible con la accesibilidad.
+                                </li>
+                                <li><strong> Sin interferencia:</strong>
+                                Si las tecnologías se usan de una forma que no es compatible con la accesibilidad,
+                                o están usadas de una forma que no cumple los requisitos de conformidad, no deben impedir a los usuarios acceder al contenido del resto de la página.
+                                Además, es necesario que la página web en su conjunto siga cumpliendo con los requisitos de conformidad en las siguientes circunstancias:
+                                <ol>
+                                    <li>cuando cualquier tecnología de la que no se depende está activada en una aplicación de usuario,</li>
+                                     <li>cuando cualquier tecnología de la que no se depende está desactivada en una aplicación de usuario, y</li>
+                                    <li>cuando cualquier tecnología de la que no se depende no es soportada por una aplicación de usuario</li>
+                                </ol>
+                                <p>Además, los siguientes criterios de conformidad se aplican a todo el contenido de la página, incluyendo el contenido del que, de todos modos, no se depende para alcanzar la conformidad, ya que su incumplimiento puede interferir con el uso de la página:</p>                           
+                                <ul>
+                                    <li><strong>1.4.2 - Control del audio</strong>,</li>
+                                    <li><strong>2.1.2 - Sin trampas para el foco del teclado</strong>,</li>
+                                    <li><strong>2.3.1 - Umbral de tres destellos o menos</strong>, y</li>
+                                    <li><strong>2.2.2 - Poner en pausa, detener, ocultar</strong>.</li>
+                                </ul>
+                                </li>
+                            </ol>
+                    </div>
+            </div>
+            <div id="panel_niveles" class="panel" hidden>
+				<h1>Niveles de accesibilidad WCAG 2.0</h1>
+                <div id="Accesibilidad A, AA, AAA">
+                    <p>
+                    Dentro de cada pauta se recoge un conjunto de criterios de conformidad (en inglés, <em>Success Criteria</em>), redactados en forma de enunciados verificables sobre el contenido web, y que pueden usarse para comprobar la conformidad de los contenidos ya existentes con respecto a WCAG 2.0, o para desarrollar nuevos contenidos de forma accesible y conforme a las pautas.
+                    Para atender a las necesidades de los distintos grupos de usuarios y circunstancias, cada uno de los criterios de conformidad está asociado a un nivel de conformidad que define el nivel de exigencia del criterio.
+                    Los niveles de conformidad son: A (el menos exigente), AA y AAA (el más exigente). </p>
+                    
+                    <p>
+                    Las siguientes listas se pueden emplear a modo de <strong>lista de verificación de WCAG 2.0</strong> (<strong><em>WCAG 2.0 checklist</em></strong>):</p>
+                        
+                    <ul>
+                        <li><a href="?menu=criterios-2.0#criterios-nivel-A">Criterios de conformidad de nivel A</a> (25 criterios)</li>
+                        <li><a href="?menu=criterios-2.0#criterios-nivel-AA">Criterios de conformidad de nivel AA</a> (13 criterios)</li>
+                        <li><a href="?menu=criterios-2.0#criterios-nivel-AAA">Criterios de conformidad de nivel AAA</a> (23 criterios)</li>
+                    </ul>
+                        
+                        
+                    <h3 id="criterios-nivel-A">Criterios de conformidad de nivel A</h3>
+                        
+                    <p>Son 25 criterios:</p>
+                        
+                    <dl>
+                        <dt>1.1.1 Contenido no textual</dt>
+                        <dd>Todo contenido no textual que se presenta al usuario tiene una alternativa textual que cumple el mismo propósito, excepto en las situaciones enumeradas a continuación.</dd>
+                        
+                        <dt>1.2.1 Sólo audio y sólo vídeo (grabado)</dt>
+                        <dd>Para contenido sólo audio grabado y contenido sólo vídeo grabado, se cumple lo siguiente, excepto cuando el audio o el vídeo es un contenido multimedia alternativo al texto y está claramente identificado como tal:
+                        <ul>
+                            <li>Sólo audio grabado: Se proporciona una alternativa para los medios tempodependientes que presenta información equivalente para el contenido sólo audio grabado.
+                            </li>
+                            <li>Sólo vídeo grabado: Se proporciona una alternativa para los medios tempodependientes o se proporciona una pista sonora que presenta información equivalente al contenido del medio de sólo vídeo grabado.
+                            </li>
+                        </ul>
+                        </dd>
+                        
+                        <dt>1.2.2 Subtítulos (grabados)</dt>
+                        <dd>Se proporcionan subtítulos para el contenido de audio grabado dentro de contenido multimedia sincronizado, excepto cuando la presentación es un contenido multimedia alternativo al texto y está claramente identificado como tal.</dd>
+                        
+                        <dt>1.2.3 Audiodescripción o Medio Alternativo (grabado)</dt>
+                        <dd>Se proporciona una alternativa para los medios tempodependientes o una audiodescripción para el contenido de vídeo grabado en los multimedia sincronizados, excepto cuando ese contenido es un contenido multimedia alternativo al texto y está claramente identificado como tal.</dd>
+                        
+                        <dt>1.3.1 Información y relaciones</dt>
+                        <dd>La información, estructura y relaciones comunicadas a través de la presentación pueden ser determinadas por software o están disponibles como texto.</dd>
+                        
+                        <dt>1.3.2 Secuencia significativa</dt>
+                        <dd>Cuando la secuencia en que se presenta el contenido afecta a su significado, se puede determinar por software la secuencia correcta de lectura.</dd>
+                        
+                        <dt>1.3.3 Características sensoriales</dt>
+                        <dd>Las instrucciones proporcionadas para entender y operar el contenido no dependen exclusivamente en las características sensoriales de los componentes como su forma, tamaño, ubicación visual, orientación o sonido.</dd>
+                        
+                        <dt>1.4.1 Uso del color</dt>
+                        <dd>El color no se usa como único medio visual para transmitir la información, indicar una acción, solicitar una respuesta o distinguir un elemento visual.</dd>
+                        
+                        <dt>1.4.2 Control del audio</dt>
+                        <dd>Si el audio de una página web suena automáticamente durante más de 3 segundos, se proporciona ya sea un mecanismo para pausar o detener el audio, o un mecanismo para controlar el volumen del sonido que es independiente del nivel de volumen global del sistema.</dd>
+                        
+                        <dt>2.1.1 Teclado</dt>
+                        <dd>Toda la funcionalidad del contenido es operable a través de una interfaz de teclado sin que se requiera una determinada velocidad para cada pulsación individual de las teclas, excepto cuando la función interna requiere de una entrada que depende del trayecto de los movimientos del usuario y no sólo de los puntos inicial y final.</dd>
+                        
+                        <dt>2.1.2 Sin trampas para el foco del teclado</dt>
+                        <dd>Si es posible mover el foco a un componente de la página usando una interfaz de teclado, entonces el foco se puede quitar de ese componente usando sólo la interfaz de teclado y, si se requiere algo más que las teclas de dirección o de tabulación, se informa al usuario el método apropiado para mover el foco.</dd>
+                        
+                        <dt>2.2.1 Tiempo ajustable</dt>
+                        <dd>Para cada límite de tiempo impuesto por el contenido, se cumple al menos uno de los siguientes casos:
+                        <ul>
+                            <li>Apagar: El usuario puede detener el límite de tiempo antes de alcanzar el límite de tiempo; <strong>ó</strong>
+                            </li>
+                            <li>Ajustar: El usuario puede ajustar el límite de tiempo antes de alcanzar dicho límite en un rango amplio que es, al menos, diez veces mayor al tiempo fijado originalmente;<strong>ó</strong>
+                            </li>
+                            <li>Extender: Se advierte al usuario antes de que el tiempo expire y se le conceden al menos 20 segundos para extender el límite temporal con una acción simple (por ejemplo, "presione la barra de espacio") y el usuario puede extender ese límite de tiempo al menos diez veces; <strong>ó</strong>
+                            </li>
+                            <li>Excepción de tiempo real: El límite de tiempo es un requisito que forma parte de un evento en tiempo real (por ejemplo, una subasta) y no resulta posible ofrecer una alternativa al límite de tiempo; <strong>ó</strong>
+                            </li>
+                            <li>Excepción por ser esencial: El límite de tiempo es esencial y, si se extendiera, invalidaría la actividad;<strong>ó</strong>
+                            </li>
+                            <li>Excepción de 20 horas: El límite de tiempo es mayor a 20 horas.
+                            </li>
+                        </ul>
+                        </dd>
+                        
+                        <dt>2.2.2 Poner en pausa, detener, ocultar</dt>
+                        <dd>Para la información que tiene movimiento, parpadeo, se desplaza o se actualiza automáticamente, se cumplen todos los casos siguientes:
+                        <ul>
+                            <li>Movimiento, parpadeo, desplazamiento: Para toda información que se mueve, parpadea o se desplaza, que (1) comienza automáticamente, (2) dura más de cinco segundos y (3) se presenta en paralelo con otro contenido, existe un mecanismo para que el usuario la pueda poner en pausa, detener u ocultar, a menos que el movimiento, parpadeo o desplazamiento sea parte esencial de una actividad; y
+                            </li>
+                            <li>Actualización automática: Para toda información que se actualiza automáticamente, que (1) se inicia automáticamente y (2) se presenta en paralelo con otro contenido, existe un mecanismo para que el usuario la pueda poner en pausa, detener u ocultar, o controlar la frecuencia de actualización a menos que la actualización automática sea parte esencial de una actividad.
+                            </li>
+                        </ul>
+                        </dd>
+                        
+                        <dt>2.3.1 Umbral de tres destellos o menos</dt>
+                        <dd>Las páginas web no contienen nada que destelle más de tres veces en un segundo, o el destello está por debajo del umbral de destello general y de destello rojo.</dd>
+                        
+                        <dt>2.4.1 Evitar bloques</dt>
+                        <dd>Existe un mecanismo para evitar los bloques de contenido que se repiten en múltiples páginas web.</dd>
+                        
+                        <dt>2.4.2 Titulado de páginas</dt>
+                        <dd>Las páginas web tienen títulos que describen su temática o propósito.</dd>
+                        
+                        <dt>2.4.3 Orden del foco</dt>
+                        <dd>Si se puede navegar secuencialmente por una página web y la secuencia de navegación afecta su significado o su operación, los componentes que pueden recibir el foco lo hacen en un orden que preserva su significado y operabilidad.</dd>
+                        
+                        <dt>2.4.4 Propósito de los enlaces (en contexto)</dt>
+                        <dd>El propósito de cada enlace puede ser determinado con sólo el texto del enlace o a través del texto del enlace sumado al contexto del enlace determinado por software, excepto cuando el propósito del enlace resultara ambiguo para los usuarios en general.</dd>
+                        
+                        <dt>3.1.1 Idioma de la página</dt>
+                        <dd>El idioma predeterminado de cada página web puede ser determinado por software.</dd>
+                        
+                        <dt>3.2.1 Al recibir el foco</dt>
+                        <dd>Cuando cualquier componente recibe el foco, no inicia ningún cambio en el contexto.</dd>
+                        
+                        <dt>3.2.2 Al recibir entradas</dt>
+                        <dd>El cambio de estado en cualquier componente de la interfaz de usuario no provoca automáticamente un cambio en el contexto a menos que el usuario haya sido advertido de ese comportamiento antes de usar el componente.</dd>
+                        
+                        <dt>3.3.1 Identificación de errores</dt>
+                        <dd>Si se detecta automáticamente un error en la entrada de datos, el elemento erróneo es identificado y el error se describe al usuario mediante un texto.</dd>
+                        
+                        <dt>3.3.2 Etiquetas o instrucciones</dt>
+                        <dd>Se proporcionan etiquetas o instrucciones cuando el contenido requiere la introducción de datos por parte del usuario.</dd>
+                        
+                        <dt>4.1.1 Procesamiento</dt>
+                        <dd>En los contenidos implementados mediante el uso de lenguajes de marcas, los elementos tienen las etiquetas de apertura y cierre completas; los elementos están anidados de acuerdo a sus especificaciones; los elementos no contienen atributos duplicados y los ID son únicos, excepto cuando las especificaciones permitan estas características.</dd>
+                        
+                        <dt>4.1.2 Nombre, función, valor</dt>
+                        <dd>Para todos los componentes de la interfaz de usuario (incluyendo pero no limitado a: elementos de formulario, enlaces y componentes generados por scripts), el nombre y la función pueden ser determinados por software; los estados, propiedades y valores que pueden ser asignados por el usuario pueden ser especificados por software; y los cambios en estos elementos se encuentran disponibles para su consulta por las aplicaciones de usuario, incluyendo las ayudas técnicas.</dd>
+                    </dl>
+                        
+                        
+                    <h3 id="criterios-nivel-AA">Criterios de conformidad de nivel AA</h3>
+                        
+                    <p>Son 13 criterios:</p>
+                        
+                    <dl>
+                        <dt>1.2.4 Subtítulos (en directo)</dt>
+                        <dd>Se proporcionan subtítulos para todo el contenido de audio en directo de los multimedia sincronizados.</dd>
+                        
+                        <dt>1.2.5 Audiodescripción (grabado)</dt>
+                        <dd>Se proporciona una audiodescripción para todo el contenido de vídeo grabado dentro de contenido multimedia sincronizado.</dd>
+                        
+                        <dt>1.4.3 Contraste (mínimo)</dt>
+                        <dd> La presentación visual de texto e imágenes de texto tiene una relación de contraste de, al menos, 4.5:1, excepto en los siguientes casos:
+                        <ul>
+                            <li>Textos grandes: Los textos de gran tamaño y las imágenes de texto de gran tamaño tienen una relación de contraste de, al menos, 3:1.
+                            </li>
+                            <li>Incidental: Los textos o imágenes de texto que forman parte de un componente inactivo de la interfaz de usuario, que son simple decoración, que no resultan visibles para nadie o forman parte de una imagen que contiene otros elementos visuales significativos, no tienen requisitos de contraste.
+                            </li>
+                            <li>Logotipos: El texto que forma parte de un logo o nombre de marca no tiene requisitos de contraste mínimo.
+                            </li>
+                        </ul>
+                        </dd>
+                        
+                        <dt>1.4.4 Cambio de tamaño del texto</dt>
+                        <dd>A excepción de los subtítulos y las imágenes de texto, todo el texto puede ser ajustado sin ayudas técnicas hasta un 200 por ciento sin que se pierdan el contenido o la funcionalidad.</dd>
+                        
+                        <dt>1.4.5 Imágenes de texto</dt>
+                        <dd>Si con las tecnologías que se están utilizando se puede conseguir la presentación visual deseada, se utiliza texto para transmitir la información en vez de imágenes de texto, excepto en los siguientes casos:
+                        <ul>
+                            <li>Configurable: La imagen de texto es visualmente configurable según los requisitos del usuario.
+                            </li>
+                            <li>Esencial: Una forma particular de presentación del texto resulta esencial para la información que se transmite.</li>
+                        </ul>
+                        </dd>
+                        
+                        <dt>2.4.5 Múltiples vías</dt>
+                        <dd>Se proporciona más de un camino para localizar una página web dentro de un conjunto de páginas web, excepto cuando la página es el resultado, o un paso intermedio, de un proceso.</dd>
+                        
+                        <dt>2.4.6 Encabezados y etiquetas</dt>
+                        <dd>Los encabezados y etiquetas describen el tema o propósito.</dd>
+                        
+                        <dt>2.4.7 Foco visible</dt>
+                        <dd>Cualquier interfaz de usuario operable por teclado tiene una forma de operar en la cuál el indicador del foco del teclado resulta visible.</dd>
+                        
+                        <dt>3.1.2 Idioma de las partes</dt>
+                        <dd>El idioma de cada pasaje o frase en el contenido puede ser determinado por software, excepto los nombres propios, términos técnicos, palabras en un idioma indeterminado y palabras o frases que se hayan convertido en parte natural del texto que las rodea.</dd>
+                        
+                        <dt>3.2.3 Navegación coherente</dt>
+                        <dd>Los mecanismos de navegación que se repiten en múltiples páginas web dentro de un conjunto de páginas web aparecen siempre en el mismo orden relativo cada vez que se repiten, a menos que el cambio sea provocado por el propio usuario.</dd>
+                        
+                        <dt>3.2.4 Identificación coherente</dt>
+                        <dd>Los componentes que tienen la misma funcionalidad dentro de un conjunto de páginas web son identificados de manera coherente.</dd>
+                        
+                        <dt>3.3.3 Sugerencias ante errores</dt>
+                        <dd>Si se detecta automáticamente un error en la entrada de datos y se dispone de sugerencias para hacer la corrección, entonces se presentan las sugerencias al usuario, a menos que esto ponga en riesgo la seguridad o el propósito del contenido.</dd>
+                        
+                        <dt>3.3.4 Prevención de errores (legales, financieros, datos)</dt>
+                        <dd>Para las páginas web que representan para el usuario compromisos legales o transacciones financieras; que modifican o eliminan datos controlables por el usuario en sistemas de almacenamiento de datos; o que envían las respuestas del usuario a una prueba, se cumple al menos uno de los siguientes casos:
+                        <ol>
+                            <li>Reversible: El envío es reversible.</li>
+                            <li>Revisado: Se verifica la información para detectar errores en la entrada de datos y se proporciona al usuario una oportunidad de corregirlos.</li>
+                            <li>Confirmado: Se proporciona un mecanismo para revisar, confirmar y corregir la información antes de finalizar el envío de los datos.</li>
+                        </ol>
+                        </dd>
+                    </dl>
+                        
+                        
+                    <h3 id="criterios-nivel-AAA">Criterios de conformidad de nivel AAA</h3>
+                        
+                    <p>Son 23 criterios:</p>
+                        
+                    <dl>
+                        <dt>1.2.6 Lengua de señas (grabado)</dt>
+                        <dd>Se proporciona una interpretación en lengua de señas para todo el contenido de audio grabado dentro de contenido multimedia sincronizado.
+                        </dd>
+                        
+                        <dt>1.2.7 Audiodescripción ampliada (grabada)</dt>
+                        <dd>Cuando las pausas en el audio de primer plano son insuficientes para permitir que la audiodescripción comunique el significado del vídeo, se proporciona una audiodescripción ampliada para todos los contenidos de vídeo grabado dentro de contenido multimedia sincronizado.
+                        </dd>
+                        
+                        <dt>1.2.8 Medio alternativo (grabado)</dt>
+                        <dd>Se proporciona una alternativa para los medios tempodependientes, tanto para todos los contenidos multimedia sincronizados grabados como para todos los medios de sólo vídeo grabado.
+                        </dd>
+                        
+                        <dt>1.2.9 Sólo audio (en directo)</dt>
+                        <dd>Se proporciona una alternativa para los medios tempodependientes que presenta información equivalente para el contenido de sólo audio en directo.
+                        </dd>
+                        
+                        <dt>1.4.6 Contraste (mejorado)</dt>
+                        <dd>La presentación visual de texto e imágenes de texto tiene una relación de contraste de, al menos, 7:1, excepto en los siguientes casos:
+                        <ul>
+                            <li>Textos grandes: Los textos de gran tamaño y las imágenes de texto de gran tamaño tienen una relación de contraste de, al menos, 4.5:1.</li>
+                            <li>Incidental: Los textos o imágenes de texto que forman parte de un componente de la interfaz de usuario inactivo, que son simple decoración, que no resultan visibles para nadie o forman parte de una imagen que contiene otros elementos visuales significativos, no tienen requisitos de contraste.</li>
+                            <li>Logotipos: El texto que forma parte de un logo o nombre de marca no tiene requisitos de contraste mínimo.</li>
+                        </ul>
+                        </dd>
+                        
+                        <dt>1.4.7 Sonido de fondo bajo o ausente</dt>
+                        <dd>Para el contenido de sólo audio grabado que (1) contiene habla en primer plano, (2) no es un CAPTCHA sonoro o un audiologo, y (3) que no es una vocalización cuya intención principal es servir como expresión musical (como el canto o el rap), se cumple al menos uno de los siguientes casos:
+                        <ul>
+                            <li>Ningún sonido de fondo: El audio no contiene sonidos de fondo.</li>
+                            <li>Apagar: Los sonidos de fondo pueden ser apagados.</li>
+                            <li>20 dB: Los sonidos de fondo son, al menos, 20 decibelios más bajos que el discurso en primer plano, con la excepción de sonidos ocasionales que duran solamente uno o dos segundos.</li>
+                        </ul>
+                        </dd>
+                        
+                        <dt>1.4.8 Presentación visual</dt>
+                        <dd>En la presentación visual de bloques de texto, se proporciona algún mecanismo para lograr lo siguiente:
+                        <ol>
+                            <li>Los colores de fondo y primer plano pueden ser elegidos por el usuario.</li>
+                            <li>El ancho no es mayor de 80 caracteres o signos (40 si es CJK).</li>
+                            <li>El texto no está justificado (alineado a los márgenes izquierdo y derecho a la vez).</li>
+                            <li>El espacio entre líneas (interlineado) es de, al menos, un espacio y medio dentro de los párrafos y el espacio entre párrafos es, al menos, 1.5 veces mayor que el espacio entre líneas.</li>
+                            <li>El texto se ajusta sin ayudas técnicas hasta un 200 por ciento de modo tal que no requiere un desplazamiento horizontal para leer una línea de texto en una ventana a pantalla completa.</li>
+                        </ol>
+                        </dd>
+                        
+                        <dt>1.4.9 Imágenes de texto (sin excepciones)</dt>
+                        <dd>Las imágenes de texto sólo se utilizan como simple decoración o cuando una forma de presentación particular del texto resulta esencial para la información transmitida.
+                        </dd>
+                        
+                        <dt>2.1.3 Teclado (sin excepciones)</dt>
+                        <dd>Toda la funcionalidad del contenido se puede operar a través de una interfaz de teclado sin requerir una determinada velocidad en la pulsación de las teclas.
+                        </dd>
+                        
+                        <dt>2.2.3 Sin tiempo</dt>
+                        <dd>El tiempo no es parte esencial del evento o actividad presentada por el contenido, exceptuando los multimedia sincronizados no interactivos y los eventos en tiempo real.
+                        </dd>
+                        
+                        <dt>2.2.4 Interrupciones</dt>
+                        <dd>El usuario puede postergar o suprimir las interrupciones, excepto cuando las interrupciones implican una emergencia.
+                        </dd>
+                        
+                        <dt>2.2.5 Re-autentificación</dt>
+                        <dd>Cuando expira una sesión autentificada, el usuario puede continuar la actividad sin pérdida de datos tras volver a identificarse.
+                        </dd>
+                        
+                        <dt>2.3.2 Tres destellos</dt>
+                        <dd>Las páginas web no contienen nada que destelle más de tres veces por segundo.
+                        </dd>
+                        
+                        <dt>2.4.8 Ubicación</dt>
+                        <dd>Se proporciona información acerca de la ubicación del usuario dentro de un conjunto de páginas web.
+                        </dd>
+                        
+                        <dt>2.4.9 Propósito de los enlaces (sólo enlaces)</dt>
+                        <dd>Se proporciona un mecanismo que permite identificar el propósito de cada enlace con sólo el texto del enlace, excepto cuando el propósito del enlace resultara ambiguo para los usuarios en general.
+                        </dd>
+                        
+                        <dt>2.4.10 Encabezados de sección</dt>
+                        <dd>Se usan encabezados de sección para organizar el contenido.
+                        </dd>
+                        
+                        <dt>3.1.3 Palabras inusuales</dt>
+                        <dd>Se proporciona un mecanismo para identificar las definiciones específicas de palabras o frases usadas de modo inusual o restringido, incluyendo expresiones idiomáticas y jerga.
+                        </dd>
+                        
+                        <dt>3.1.4 Abreviaturas</dt>
+                        <dd>Se proporciona un mecanismo para identificar la forma expandida o el significado de las abreviaturas.
+                        </dd>
+                        
+                        <dt>3.1.5 Nivel de lectura</dt>
+                        <dd>Cuando un texto requiere un nivel de lectura más avanzado que el nivel mínimo de educación secundaria una vez que se han eliminado nombres propios y títulos, se proporciona un contenido suplementario o una versión que no requiere un nivel de lectura mayor a ese nivel educativo.
+                        </dd>
+                        
+                        <dt>3.1.6 Pronunciación</dt>
+                        <dd>Se proporciona un mecanismo para identificar la pronunciación específica de las palabras cuando el significado de esas palabras, dentro del contexto, resulta ambiguo si no se conoce su pronunciación.
+                        </dd>
+                        
+                        <dt>3.2.5 Cambios a petición</dt>
+                        <dd>Los cambios en el contexto son iniciados únicamente a solicitud del usuario o se proporciona un mecanismo para detener tales cambios.
+                        </dd>
+                        
+                        <dt>3.3.5 Ayuda</dt>
+                        <dd>Se proporciona ayuda dependiente del contexto.
+                        </dd>
+                        
+                        <dt>3.3.6 Prevención de errores (todos)</dt>
+                        <dd>Para las páginas web que requieren al usuario el envío de información, se cumple al menos uno de los siguientes casos:
+                        <ol>
+                            <li>Reversible: El envío es reversible.</li>
+                            <li>Revisado: Se verifica la información para detectar errores en la entrada de datos y se proporciona al usuario una oportunidad de corregirlos.</li>
+                        <li>Confirmado: Se proporciona un mecanismo para revisar, confirmar y corregir la información antes de finalizar el envío de los datos.</li>
+                        </ol>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div id="panel_requisitos" class="panel" hidden>
+				<h1>Requisitos legales a empresas y sanciones de accesibilidad</h1>
+                <div  id="Requisitos legales y sanciones de accesibilidad">
+                    <h2>Requisitos legales</h2>
+                    <p>La Convención sobre los Derechos de las Personas con Discapacidad, realizada 
+                        en 2006, entre otros aspectos, trata de la accesibilidad y la participación de las 
+                        personas con discapacidad en la Sociedad de la Información y del Conocimiento. Las  
+                        conclusiones  de  esta  convención  han  sido  ratificadas  por  el  Gobierno 
+                        español en abril de 2008, por lo que resultan de obligado cumplimiento. </p>
+                    <h3>Servicios de la sociedad de la información y del comercio electrónico</h3>
+                    <p>La  <strong>Ley  34/2002</strong>,  de  Servicios  de  la  Sociedad  de  la  Información  y  de 
+                        Comercio Electrónico (LSSICE),incluyó una disposición fundamental en temas de accesibilidad, motivada por la 
+                        Resolución del Consejo de la Unión Europea OJ C 86 de 10-4-2002</p>
+                    <p> La disposición adicional quinta se titula “Accesibilidad para las personas con 
+                        discapacidad  y  de  edad  avanzada  a  la  información  proporcionada  por  medios 
+                        electrónicos” y establece: </p>
+                    <p><strong>Uno</strong>: Las   Administraciones   públicas   adoptarán   las   medidas 
+                        necesarias  para  que  la  información  disponible  en  sus  respectivas 
+                        páginas de Internet pueda ser accesible a personas con discapacidad 
+                        y  de  edad  avanzada,  de  acuerdo  con  los  criterios  de  accesibilidad 
+                        al contenido generalmente reconocidos, antes del 31 de diciembre 
+                        de  2005.  Asimismo,  podrán  exigir  que  las  páginas  de  Internet 
+                        cuyo  diseño  o  mantenimiento  financien  apliquen  los  criterios  de 
+                        accesibilidad antes mencionados</p>
+                    <p><strong>Dos</strong>: Igualmente,   se   promoverá   la   adopción   de   normas   de 
+                        accesibilidad  por  los  prestadores  de  servicios  y  los  fabricantes  de 
+                        equipos  y  software,  para  facilitar  el  acceso  de  las  personas  con 
+                        discapacidad o de edad avanzada a los contenidos digitales.</p>
+                    <h3>Igualdad de Oportunidades, No Discriminación y Accesibilidad 
+                        Universal de las Personas con Discapacidad</h3>
+                    <p>En  la  <strong>Ley  51/2003</strong>,  de  Igualdad  de  Oportunidades,  No  Discriminación  y 
+                        Accesibilidad  Universal  de  las  Personas  con  Discapacidad  (LIONDAU). 
+                        Es de destacar la disposición final séptima, titulada “Condiciones básicas de 
+                        accesibilidad y no discriminación para el acceso y utilización de las tecnologías, 
+                        productos y servicios relacionados con la sociedad de la información y medios 
+                        de comunicación social” que establece:</p>
+                            <ul>
+                                <li> El gobierno tenía hasta finales de 2005 para definir las condiciones básicas 
+                                    de accesibilidad de productos y servicios de la sociedad de la información.</li>
+                                <li>Estas condiciones son obligatorias para todos los productos y servicios nuevos
+                                    en un plazo de 4 a 6 años desde la publicación de la ley.</li>
+                                <li> Las  condiciones  serían  obligatorias  para  los  productos  y 
+                                        servicios ya existentes en un plazo de 8 a 10 años desde la publicación de 
+                                        la ley.</li>
+                            </ul>
+                    <p>También  merece  la  pena  destacar  la  disposición  final  décima,  titulada 
+                            “Currículo formativo sobre accesibilidad universal y formación de profesionales”, el Gobierno
+                             se comprometía a introducir contenidos de diseño para todos en todos los niveles educativos </p>
+                    <p>El Ministerio de Educación aprovechó para incluir el diseño para todos en todas 
+                            las directrices para las titulaciones universitarias en el 
+                            Real Decreto 1393/2007 de ordenación de las enseñanzas universitarias oficiales.</p>
+                    <h3>Condiciones básicas para el acceso de las personas con discapacidad a 
+                            las tecnologías, productos y servicios relacionados con la sociedad de 
+                            la información y medios de comunicación social</h3>
+                    <p>En 2007 (es decir, dos años más tarde de lo previsto) se publican las <strong>Condiciones 
+                            básicas</strong>  para  el  acceso  de  las  personas  con  discapacidad  a  las  tecnologías, 
+                            productos y servicios relacionados con la sociedad de la información y medios 
+                            de comunicación social. Caben destacar los siguientes capítulos del real decreto:</p>
+                            <ol type="square">
+                                <li>II. Condiciones básicas de accesibilidad y no discriminación en materia de  
+                                        telecomunicaciones</li>
+                                <li>III. Criterios y condiciones básicas de accesibilidad y no discriminación en 
+                                        materia de sociedad de la información</li>
+                                <li>IV. Condiciones básicas de accesibilidad y no discriminación en materia de
+                                        medios de comunicación social</li>        
+                            </ol>
+                    <p> En el capítulo III se recogen aunque  a  modo  de  ejemplo,  las  normas  de  accesibilidad  de  hardware  (UNE 
+                            139801:2003) y de software (UNE 139802:2003).</p>
+                    <p>Para las páginas de las admnistraciones públicas o construidas con fondos públicos se exige accesibilidad. Los plazos son los siguientes:</p>
+                    <ul>
+                        <li> <strong>22-11-2007</strong>:  todas  las  páginas  web  nuevas  que  se  creen  a  partir  de  esa 
+                                fecha  deben  cumplir  con  los  requisitos  de  prioridad  1  de  la  norma  UNE 
+                                139803:2004</li>
+                        <li> <strong>22-05-2008</strong>: todas las páginas web ya existentes en esta fecha deben cumplir 
+                                con los requisitos de prioridad 1 de la norma UNE 139803:2004.</li>
+                        <li> <strong>31-12-2008</strong>:  en  esta  fecha  todas  las  páginas  web  deben  cumplir  con  los 
+                                requisitos de prioridad 2 de la norma UNE 139803:2004.</li>        
+                    </ul>
+                    <p>Muchas páginas ya cumplen con estas exigencias de accesibilidad, pero sigue habiendo algunas que todavía no.</p>
+                    <h3>Contratos del Sector Público</h3>
+                    <p>En 2007 se publica la <strong>Ley 30/2007</strong>, de Contratos del Sector Público, esta ley constituye la transposición al ámbito español de la directiva 
+                            europea  2004/18/EC,  en  cuyo  artículo  23  se  indica  que  las  especificaciones 
+                            técnicas deberían definirse teniendo en cuenta los criterios de accesibilidad para 
+                            personas con discapacidades o el diseño para todos los usuarios.</p>
+                    <h2>Sanciones de accesibilidad</h2>
+                    <p>Se clasifican según la infracción y el grado de esta, el importe de las sanciones es muy variable como se refleja en la sigueinte tabla:</p>
+                    <table border="1" >
+                            <caption>Importes de las sanciones según infracción y grado (en euros).</caption>
+                            <tr>
+                                <th></th>
+                                <th>Mínimo</th>
+                                <th>Medio</th>
+                                <th>Máximo</th>
+                            </tr>
+                            <tr>
+                                <th>Leves</th>
+                                <td>301-6.000</td>
+                                <td>6.001-18.000</td>
+                                <td>18.001-30.000</td>
+                            </tr>
+                            <tr>
+                                <th>Graves</th>
+                                <td>30.001-60.000</td>
+                                <td>60.001-78.000</td>
+                                <td>78.001-90.000</td>
+                            </tr>
+                            <tr>
+                                <th>Muy graves</th>
+                                <td>90.001-300.000</td>
+                                <td>300.001-600.000</td>
+                                <td>600.001-1.000.000</td>
+                            </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- CSS -->
+            <div id="panel_enlazar" class="panel" hidden>
+                <h2>Cómo enlazar un documento CSS a uno HTML5</h2>
+                <div id="enlaceCSS">
+                    <p>Una vez creado el archivo CSS hay que decirle a la página web (archivo <b>.html</b>) que tiene que leer las características que hay en nuestro archivo <b>.css</b> para que sepa qué propiedades queremos que tenga cada elemento de la página. </p>
+                    <p>La llamada a la hoja de estilos hay que indicarla dentro de la cabecera o &lt;head&gt; de la página. Las líneaa de código HTML que tenemos que incluir en la cabecera para hacer referencia a una hoja de estilos llamada "estilos.css" es esta:</p>
+                    <pre>
+                    &lt;link href="css/estilos.css" rel="stylesheet" type="text/css"/&gt;
+                    </pre>
+                    <p>Con "href" indicamos la ubicación del archivo, en este caso en una carpeta llamada "css" al mismo nivel que el archivo <b>.html</b> que estamos editando</p>
+                    <p>El resto de la línea sirve para indicar que es una hoja de estilos, y su contenido es texto en lenguaje CSS.</p>
+                </div>
+            </div>
+            <div id="panel_color" class="panel" hidden>
+                <h2>Colores y fondos en CSS</h2>
+                <div id="Coloresyfondos">
+                    <p>Para aplicar color a un texto de un archivo <b>.html</b> mediante CSS, lo hacemos de la siguiente forma.</p>
+                    <p>Si queremos que todos los títulos (&lt;h1&gt;) se vean en color rojo, lo haríamos del siguiente modo.</p>
+                    <pre>
+                    h1{
+                        color: #ff000;
+                    }
+                    </pre>
+                    <p>*También podemos poner el color de forma simple como "red", aunque hay un numero determinado de colores que se pueden escribir de este modo.</p>
+                    <br>
+                    <p>Para aplicar colores de fondo a nuestro archivo <b>.html</b> mediante CSS, se haría de esta manera.</p>
+                    <pre>
+                    body{
+                        background-color: grey;
+                    }
+                    </pre>
+                    <p>De este modo, todo lo contenido en la etiqueta &lt;body&gt; tendrá un fondo de color gris.</p>
+                    <p>También podemos poner una imagen de fondo de la siguiente manera.</p>
+                    <pre>
+                    body{
+                        background-image: url(fondo.png);
+                    }
+                    </pre>
+                    <p>Aquí el archivo fondo.png se pone como fondo de la web. Es recomendable establecer a la vez un color de fondo por si la imagen no puede cargarse, se vea el color de fondo al menos.</p>
+                </div>
+            </div>
+            <div id="panel_fuente" class="panel" hidden>
+                <h2>Dar formato a fuentes en CSS</h2>
+                <div id="FuentesCSS">
+                    <h3>Color</h3>
+                    <p>La propiedad <b>color</b> establece el color con el que se muestra el texto contenido en un elemento. El color de la letra no puede ser transparente, ya que se debe indicar explícitamente un color mediante cualquiera de las diferentes formas de indicar un color en CSS.</p>
+                    <p>Ejemplo de la propiedad color:</p>
+                    <pre>
+                    body{
+                        color: #CCC;
+                    }
+                    </pre>
+                    <h3>Font-family</h3>
+                    <p>La propiedad <b>font-family</b> establece la fuente o tipo de letra con la que se muestra el texto. Cuando no se establece de forma explícita el tipo de letra, los navegadores muestran el texto con un tipo de letra por defecto. Aunque la fuente por defecto depende de cada navegador, la mayoría utilizan Times New Roman o la fuente disponible que más se parezca.</p>
+                    <p>Ejemplo de la propiedad font-family:</p>
+                    <pre>
+                    p{
+                        font-family: "Times New Roman", Times, serif;
+                    }
+                    </pre>
+                    <h3>Font-size</h3>
+                    <p>La propiedad <b>font-size</b> permite establecer el tamaño de letra del texto. Además de todas las unidades de medida absolutas y relativas conocidas (em, ex, px, %, in, cm, mm, pt, pc) también se pueden utilizar palabras clave que hacen referencia a tamaños de letra absolutos y relativos.</p>
+                    <p>Ejemplo de la propiedad font-size:</p>
+                    <pre>
+                    h1{
+                        font-size:40px;
+                    }
+                    </pre>
+                    <h3>Font-style</h3>
+                    <p>La propiedad <b>font-style</b> permite establecer el estilo con el que se muestra el tipo de letra seleccionado mediante la propiedad font-family. Los tres estilos disponibles son: normal (normal), itálico (italic) y oblicuo (oblique).</p>
+                    <p>Esquema de la propiedad font-style:</p>
+                    <pre>
+                    p{
+                        font-style: italic;
+                    }
+                    </pre>
+                    <h3>Font-variant</h3>
+                    <p>La propiedad <b>font-variant</b> permite elegir la variante con la que se muestra el tipo de letra seleccionado mediante la propiedad font-family. Las únicas variantes disponibles en CSS 2.1 son: normal (normal) y versalita (small-caps).</p>
+                    <p>Ejempo de la propiedad font-variant:</p>
+                    <pre>
+                    p{
+                        font-variant: small-caps;
+                    }
+                    </pre>
+                    <h3>Font-weight</h3>
+                    <p>La propiedad <b>font-weight</b> permite establecer el grosor con el que se muestran las letras del texto. Normalmente, la propiedad font-weight se emplea para mostrar un texto en negrita (valor bold):</p>
+                    <p>Ejemplo de la propiedad font-weight:</p>
+                    <pre>
+                    p{
+                        font-weight: bold;
+                    }
+                    </pre>
+                </div>
+            </div>
+            <div id="panel_texto" class="panel" hidden>
+                <h2>Dar formato a textos en CSS</h2>
+                <div id="TextosCSS">
+                    <p> CSS define numerosas propiedades que determinan la apariencia del texto en su conjunto. Estas propiedades adicionales permiten controlar al alineación del texto, el interlineado, la separación entre palabras, etc.</p>
+                    <h3>Text-align</h3>
+                    <p> La propiedad que define la alineación del texto se denomina <b>text-align</b>. </p>
+                    <p> Los valores definidos por CSS permiten alinear el texto según los valores tradicionales: a la izquierda (left), a la derecha (right), centrado (center) y justificado (justify).</p>
+                    <p> Ejemplo de text-aling:</p>
+                    <pre>
+                    h1{
+                        text-align: center;
+                    }
+                    </pre>
+                    <h3>Text-decoration</h3>
+                    <p> La propiedad que decora el texto se denomina <b>text-decoration</b>.</p>
+                    <p> El valor <b>underline</b> subraya el texto. El valor <b>overline</b> añade una línea en la parte superior del texto, bastante poco usado. El valor <b>line-through</b> muestra el texto tachado. Por último, el valor <b>blink</b> muestra el texto parpadeante; se recomienda evitar su uso por las molestias que genera a la mayoría de usuarios.</p>
+                    <p> Ejemplo de la propiedad text-decoration:</p>
+                    <pre>
+                    h1{
+                        text-decoration: line-through;
+                    }
+                    </pre>
+                    <h3>Text-trasnform</h3>
+                    <p> Una de las propiedades de CSS más desconocidas y que puede ser de gran utilidad en algunas circunstancias es la propiedad <b>text-transform</b>, que puede variar de forma sustancial el aspecto del texto.</p>
+                    <p> La propiedad text-transform permite mostrar el texto original transformado en un texto completamente en mayúsculas (uppercase), en minúsculas (lowercase) o con la primera letra de cada palabra en mayúscula (capitalize).</p>
+                    <p> Ejemplo de la propiedad text-transform:</p>
+                    <pre>
+                    .mayus{
+                        text-transform: uppercase;
+                    }
+                    </pre>
+                    <h3>Text-ident</h3>
+                    <p>En muchas publicaciones impresas suele ser habitual tabular la primera línea de cada párrafo para facilitar su lectura. CSS permite controlar esta tabulación mediante la propiedad <b>text-indent.</b></p>
+                    <p>Ejemplo de la propiedad text-ident:</p>
+                    <pre>
+                    h1{
+                        text-indent: 50px;
+                    }
+                    </pre>
+                </div>
+            </div>
+            <div id="panel_clase" class="panel" hidden>
+                <h2>Diferencias entre IDs y clases. Cómo usarlos en CSS.</h2>
+                <div id="clases">
+                    <p>A cualquier elemento de HTML5 se le puede asignar un ID o un clase, para diferenciarlos. Los ID son específicos para cada elemento, mientras que varios elementos diferentes pueden tener una misma clase que los agrupa.</p>
+                    <p>En CSS podemos hacer referencia a un ID o una clase para aplicar un estilo a todos los elementos contenidos por el ID o la clase.</p>
+                    <p>Esto es muy útil, por ejemplo si tengo varios títulos (&lt;h1&gt;) a los que les he aplicado un estilo, y quiero que uno de ellos sea diferente, puedo asignar un ID a ese título y en el CSS aplicar el estilo diferente a ese ID</p>
+                    <p>La forma de llamar a estilos en CSS es la siguiente:</p>
+                    <p>-Para dar estilo a una clase haríamos</p>
+                    <pre>
+                    .clase1{
+                        color: red;
+                    }
+                    </pre>
+                    <p>De esta forma cualquier elemento con la clase "clase1" tendrá la letra de color rojo</p>
+                    <p>-Para dar estilo a un ID sería</p>
+                    <pre>
+                    #azul{
+                        color: blue;
+                    }
+                    </pre>
+                    <p>Así, el elemento con el ID "azul", tendrá la letra de color azul.</p>
+                </div>
+            </div>
+            <!-- Sobre app y ayuda -->
+             <div id="panel_creditos" class="panel" hidden>
+                <h2>Creadores:</h2>
+                <p><strong>Benigno Cantero</strong></p>
+                <p><strong>Joaquín Díaz</strong></p>
+                <p><strong>Álvaro Mena</strong></p>
+                <p><strong>Alejandro Ruiz</strong></p>
+                <hr>
+                <p>Aplicación híbrida creada entre HTML5 y CSS, con el uso de Material Design (Materialize CSS) para dar formato y empaquetada con Apache Cordova.</p>
+            </div>
+            <div id="panel_error" class="panel" hidden>
+                Caja para la gestión de errores (mostrar errores y/o avisos)
+            </div>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+div.panel {
+    font-family: 'Times New Roman', Times, serif;
+    page-break-after: always;
+}
+
+nav {
+    background-color: rgb(76, 180, 206);
+}
+
+h1,h2,h3,h4 {
+    color: rgb(76, 180, 206);
+}
+
+table, th, td {
+    border: 1px solid black;
+ }
